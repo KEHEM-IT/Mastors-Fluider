@@ -8,14 +8,35 @@
         content="Mastors Fluider v1.0.5 - Modern, accessible breakpoint system for responsive design">
     <meta name="keywords" content="CSS, SCSS, responsive design, breakpoints, mobile-first, accessibility">
     <meta name="author" content="KEHEM-IT">
-    <title>Mastors Fluider v1.0.5 - Complete Documentation</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css">
 
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kehem-it.github.io/Mastors-Fluider/">
+    <meta property="og:title" content="Mastors Fluider v1.0.5 - Modern Responsive Breakpoint System">
+    <meta property="og:description"
+        content="Modern, accessible breakpoint system for responsive design using mobile-first approach and em units. Built for developers who care about accessibility.">
+    <meta property="og:image" content="https://kehem-it.github.io/Mastors-Fluider/preview.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kehem-it.github.io/Mastors-Fluider/">
+    <meta property="twitter:title" content="Mastors Fluider v1.0.5 - Modern Responsive Breakpoint System">
+    <meta property="twitter:description"
+        content="Modern, accessible breakpoint system for responsive design using mobile-first approach and em units.">
+    <meta property="twitter:image" content="https://kehem-it.github.io/Mastors-Fluider/preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <title>Mastors Fluider v1.0.5 - Complete Documentation</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -75,7 +96,7 @@
 
     <header class="gradient-1 text-white py-16 px-4 shadow-2xl">
         <div class="max-w-7xl mx-auto text-center">
-            <div class="inline-block bg-white/20 backdrop-blur-md px-6 py-2 rounded-full text-sm mb-4">
+            <div class="inline-block bg-white/30 backdrop-blur-md text-white-600 px-6 py-2 rounded-full text-sm mb-4">
                 v1.0.5 - Latest Release
             </div>
             <h1 class="text-5xl md:text-6xl font-bold mb-4 flex items-center justify-center gap-4">
@@ -102,25 +123,41 @@
         </div>
     </header>
 
-    <nav class="sticky top-0 bg-dark-card border-b border-dark-border z-50 shadow-lg backdrop-blur-md">
+    <nav class="sticky top-0 bg-dark-card/95 border-b border-dark-border z-50 shadow-lg backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex gap-6 overflow-x-auto py-4 scrollbar-hide">
+            <div class="flex gap-6 overflow-x-auto py-4 scrollbar-hide" id="navContainer">
                 <a href="#overview"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Overview</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fas fa-info-circle mr-2"></i>Overview
+                </a>
                 <a href="#installation"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Installation</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fas fa-download mr-2"></i>Installation
+                </a>
                 <a href="#breakpoints"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Breakpoints</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fas fa-mobile-alt mr-2"></i>Breakpoints
+                </a>
                 <a href="#scss"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">SCSS</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fab fa-sass mr-2"></i>SCSS
+                </a>
                 <a href="#css"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">CSS</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fab fa-css3-alt mr-2"></i>CSS
+                </a>
                 <a href="#examples"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Examples</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fas fa-code mr-2"></i>Examples
+                </a>
                 <a href="#changelog"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Changelog</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fas fa-history mr-2"></i>Changelog
+                </a>
                 <a href="#faq"
-                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">FAQ</a>
+                    class="nav-link text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium px-3 py-2 rounded-lg">
+                    <i class="fas fa-question-circle mr-2"></i>FAQ
+                </a>
             </div>
         </div>
     </nav>
@@ -469,32 +506,342 @@
         </section>
 
         <section id="scss" class="mb-16">
-            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl border border-dark-border">
                 <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
                     <i class="fab fa-sass text-pink-400"></i>
                     SCSS Mixins & Functions
                 </h2>
                 <p class="text-dark-muted mb-8">Powerful SCSS mixins for flexible responsive design. Full documentation
                     available in the <a href="https://github.com/KEHEM-IT/Mastors-Fluider"
-                        class="text-purple-400 hover:text-purple-300">GitHub repository</a>.</p>
+                        class="text-purple-400 hover:text-purple-300 underline">GitHub repository</a>.</p>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-dark-bg p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <i class="fas fa-arrows-alt-h text-blue-400"></i>
-                            break-between()
-                        </h3>
-                        <p class="text-dark-muted mb-3">Apply styles between two breakpoints</p>
-                        <code class="text-sm text-purple-400">@include break-between(md, xl) { }</code>
+                <!-- Main Mixins -->
+                <div class="mb-10">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-400">🛠️ Main Mixins</h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <!-- breakpoint() -->
+                        <div
+                            class="bg-dark-bg p-6 rounded-lg border border-dark-border hover:border-purple-500/50 transition-all">
+                            <h4 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                                <i class="fas fa-cog text-purple-400"></i>
+                                <code class="text-purple-400">breakpoint()</code>
+                            </h4>
+                            <p class="text-dark-muted mb-4">Main breakpoint mixin with full control over size, type, and
+                                orientation.</p>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="text-xs text-cyan-400 font-semibold uppercase">Parameters:</span>
+                                    <ul class="text-sm text-dark-muted mt-1 space-y-1 ml-4">
+                                        <li>• <code class="text-purple-300">$size</code> - Breakpoint name (required)
+                                        </li>
+                                        <li>• <code class="text-purple-300">$type</code> - 'min' or 'max' (optional)
+                                        </li>
+                                        <li>• <code class="text-purple-300">$orientation</code> - portrait/landscape
+                                            (optional)
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>@include breakpoint(md) {
+          padding: 2rem;
+        }
+        
+        @include breakpoint(lg, 'max') {
+          height: 60px;
+        }
+        
+        @include breakpoint(md, 'min', landscape) {
+          grid-template-columns: repeat(3, 1fr);
+        }</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- break-up() -->
+                        <div
+                            class="bg-dark-bg p-6 rounded-lg border border-dark-border hover:border-cyan-500/50 transition-all">
+                            <h4 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                                <i class="fas fa-arrow-up text-cyan-400"></i>
+                                <code class="text-cyan-400">break-up()</code>
+                            </h4>
+                            <p class="text-dark-muted mb-4">Mobile-first shorthand for min-width queries. Applies styles
+                                from
+                                breakpoint and up.</p>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="text-xs text-cyan-400 font-semibold uppercase">Usage:</span>
+                                </div>
+
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>.card {
+          padding: 1rem;
+          
+          @include break-up(md) { // 768px+
+            padding: 2rem;
+          }
+          
+          @include break-up(xl) { // 1200px+
+            padding: 3rem;
+          }
+        }</code></pre>
+                                </div>
+
+                                <div class="text-xs text-dark-muted italic">
+                                    💡 Most common mixin for mobile-first design
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- break-down() -->
+                        <div
+                            class="bg-dark-bg p-6 rounded-lg border border-dark-border hover:border-orange-500/50 transition-all">
+                            <h4 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                                <i class="fas fa-arrow-down text-orange-400"></i>
+                                <code class="text-orange-400">break-down()</code>
+                            </h4>
+                            <p class="text-dark-muted mb-4">Desktop-first shorthand for max-width queries. Applies
+                                styles up to
+                                the breakpoint.</p>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="text-xs text-cyan-400 font-semibold uppercase">Usage:</span>
+                                </div>
+
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>.sidebar {
+          width: 300px;
+          
+          @include break-down(lg) { // ≤1024px
+            width: 250px;
+          }
+          
+          @include break-down(md) { // ≤768px
+            width: 100%;
+          }
+        }</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- break-between() -->
+                        <div
+                            class="bg-dark-bg p-6 rounded-lg border border-dark-border hover:border-blue-500/50 transition-all">
+                            <h4 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                                <i class="fas fa-arrows-alt-h text-blue-400"></i>
+                                <code class="text-blue-400">break-between()</code>
+                            </h4>
+                            <p class="text-dark-muted mb-4">Apply styles between two breakpoints only.</p>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="text-xs text-cyan-400 font-semibold uppercase">Usage:</span>
+                                </div>
+
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>.banner {
+          @include break-between(md, xl) {
+            font-size: 2rem; // 768px to 1200px
+          }
+        }</code></pre>
+                                </div>
+
+                                <div class="text-xs bg-blue-500/10 text-blue-300 p-2 rounded border border-blue-500/30">
+                                    <strong>Compiles to:</strong><br>
+                                    <code class="text-xs">@media (min-width: 48em) and (max-width: 75em)</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- break-only() -->
+                        <div
+                            class="bg-dark-bg p-6 rounded-lg border border-dark-border hover:border-yellow-500/50 transition-all">
+                            <h4 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                                <i class="fas fa-circle text-yellow-400"></i>
+                                <code class="text-yellow-400">break-only()</code>
+                            </h4>
+                            <p class="text-dark-muted mb-4">Apply styles only within a specific breakpoint range.</p>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="text-xs text-cyan-400 font-semibold uppercase">Usage:</span>
+                                </div>
+
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>.notification {
+          @include break-only(md) {
+            position: fixed; // 768px to 1023px
+          }
+        }</code></pre>
+                                </div>
+
+                                <div class="text-xs text-dark-muted italic">
+                                    💡 Targets current breakpoint to next breakpoint - 1px
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- custom-breakpoint() -->
+                        <div
+                            class="bg-dark-bg p-6 rounded-lg border border-dark-border hover:border-pink-500/50 transition-all">
+                            <h4 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                                <i class="fas fa-sliders-h text-pink-400"></i>
+                                <code class="text-pink-400">custom-breakpoint()</code>
+                            </h4>
+                            <p class="text-dark-muted mb-4">Use custom width values not in the predefined breakpoints
+                                map.</p>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="text-xs text-cyan-400 font-semibold uppercase">Parameters:</span>
+                                    <ul class="text-sm text-dark-muted mt-1 space-y-1 ml-4">
+                                        <li>• <code class="text-purple-300">$width</code> - Custom width in em, px, or
+                                            rem</li>
+                                        <li>• <code class="text-purple-300">$type</code> - 'min' or 'max' (optional)
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>.special-layout {
+          @include custom-breakpoint(50em) {
+            display: grid; // 800px+
+          }
+          
+          @include custom-breakpoint(900px, 'max') {
+            display: block; // ≤900px
+          }
+        }</code></pre>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="bg-dark-bg p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <i class="fas fa-circle text-yellow-400"></i>
-                            break-only()
-                        </h3>
-                        <p class="text-dark-muted mb-3">Single breakpoint range only</p>
-                        <code class="text-sm text-purple-400">@include break-only(md) { }</code>
+                <!-- SCSS Functions -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-400">📦 SCSS Functions</h3>
+
+                    <div class="bg-dark-bg p-6 rounded-lg border border-dark-border">
+                        <h4 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-function text-green-400"></i>
+                            <code class="text-green-400">get-breakpoint()</code>
+                        </h4>
+                        <p class="text-dark-muted mb-4">Retrieve the value of a breakpoint from the $breakpoints map.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <span class="text-xs text-cyan-400 font-semibold uppercase block mb-2">Basic
+                                    Usage:</span>
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>$tablet-width: get-breakpoint(tablet);
+        // Returns: 48em
+        
+        .custom-element {
+          max-width: $tablet-width;
+        }</code></pre>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="text-xs text-cyan-400 font-semibold uppercase block mb-2">Advanced Use
+                                    Cases:</span>
+                                <div class="bg-dark-card p-3 rounded border border-dark-border">
+                                    <pre class="text-sm text-green-400 overflow-x-auto"><code>// In calculations
+        $custom-width: get-breakpoint(md) + 5em;
+        
+        // Pass to JavaScript
+        :root {
+          --breakpoint-md: #{get-breakpoint(md)};
+        }
+        
+        // Store in variables
+        $mobile: get-breakpoint(mobile);
+        $desktop: get-breakpoint(desktop);</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 bg-green-500/10 border border-green-500/30 p-4 rounded">
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-lightbulb text-green-400 mt-1"></i>
+                                <div>
+                                    <strong class="text-green-300">Use Cases:</strong>
+                                    <ul class="text-sm text-green-200 mt-2 space-y-1 ml-4">
+                                        <li>• Store breakpoint values in variables</li>
+                                        <li>• Use in calculations and mathematical operations</li>
+                                        <li>• Pass to JavaScript via CSS custom properties</li>
+                                        <li>• Create dynamic, reusable component styles</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Reference Table -->
+                <div
+                    class="mt-12 bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 rounded-lg border border-purple-500/30">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                        <i class="fas fa-book text-purple-400"></i>
+                        Quick Reference
+                    </h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b border-purple-500/30">
+                                    <th class="text-left py-2 px-3 text-cyan-400">Mixin</th>
+                                    <th class="text-left py-2 px-3 text-cyan-400">Purpose</th>
+                                    <th class="text-left py-2 px-3 text-cyan-400">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-dark-muted">
+                                <tr class="border-b border-purple-500/20">
+                                    <td class="py-2 px-3"><code class="text-purple-400">break-up($size)</code></td>
+                                    <td class="py-2 px-3">Mobile-first (min-width)</td>
+                                    <td class="py-2 px-3"><code class="text-green-400">@include break-up(md)</code></td>
+                                </tr>
+                                <tr class="border-b border-purple-500/20">
+                                    <td class="py-2 px-3"><code class="text-orange-400">break-down($size)</code></td>
+                                    <td class="py-2 px-3">Desktop-first (max-width)</td>
+                                    <td class="py-2 px-3"><code class="text-green-400">@include break-down(lg)</code>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-purple-500/20">
+                                    <td class="py-2 px-3"><code class="text-blue-400">break-between($min, $max)</code>
+                                    </td>
+                                    <td class="py-2 px-3">Between two breakpoints</td>
+                                    <td class="py-2 px-3"><code
+                                            class="text-green-400">@include break-between(md, xl)</code>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-purple-500/20">
+                                    <td class="py-2 px-3"><code class="text-yellow-400">break-only($size)</code></td>
+                                    <td class="py-2 px-3">Single breakpoint range</td>
+                                    <td class="py-2 px-3"><code class="text-green-400">@include break-only(md)</code>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-purple-500/20">
+                                    <td class="py-2 px-3"><code class="text-pink-400">custom-breakpoint($width)</code>
+                                    </td>
+                                    <td class="py-2 px-3">Custom width values</td>
+                                    <td class="py-2 px-3"><code
+                                            class="text-green-400">@include custom-breakpoint(50em)</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-3"><code class="text-green-400">get-breakpoint($size)</code></td>
+                                    <td class="py-2 px-3">Get breakpoint value</td>
+                                    <td class="py-2 px-3"><code class="text-green-400">$width: get-breakpoint(md)</code>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -506,89 +853,555 @@
                     <i class="fab fa-css3-alt text-blue-400"></i>
                     CSS Utility Classes
                 </h2>
-                <p class="text-dark-muted mb-8">Ready-to-use utility classes for rapid responsive development.</p>
+                <p class="text-dark-muted mb-8">Ready-to-use utility classes for rapid responsive development without
+                    SCSS
+                    compilation.</p>
 
-                <div class="space-y-8">
+                <div class="space-y-12">
+                    <!-- Mobile-First Classes -->
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4">Mobile-First Classes</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Mobile-First Classes (break-up-*)</h3>
+                        <p class="text-dark-muted mb-4">Show elements at breakpoint and above (min-width).</p>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left">
                                 <thead class="bg-dark-bg">
                                     <tr>
                                         <th class="px-6 py-4 font-semibold">Class</th>
+                                        <th class="px-6 py-4 font-semibold">Breakpoint</th>
                                         <th class="px-6 py-4 font-semibold">Shows At</th>
-                                        <th class="px-6 py-4 font-semibold">Example</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
                                         <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-xs</code>
+                                        </td>
+                                        <td class="px-6 py-4">0px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Always visible</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
                                                 class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-sm</code>
                                         </td>
                                         <td class="px-6 py-4">576px+</td>
-                                        <td class="px-6 py-4 text-dark-muted">Visible on small devices and up</td>
+                                        <td class="px-6 py-4 text-dark-muted">Small devices and up</td>
                                     </tr>
                                     <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
                                         <td class="px-6 py-4"><code
                                                 class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-md</code>
                                         </td>
                                         <td class="px-6 py-4">768px+</td>
-                                        <td class="px-6 py-4 text-dark-muted">Visible on tablets and up</td>
+                                        <td class="px-6 py-4 text-dark-muted">Medium devices and up</td>
                                     </tr>
                                     <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
                                         <td class="px-6 py-4"><code
                                                 class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-lg</code>
                                         </td>
                                         <td class="px-6 py-4">1024px+</td>
-                                        <td class="px-6 py-4 text-dark-muted">Visible on laptops and up</td>
+                                        <td class="px-6 py-4 text-dark-muted">Large devices and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1200px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Extra large devices and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-2xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1536px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">2X large devices and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-mobile</code>
+                                        </td>
+                                        <td class="px-6 py-4">520px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Mobile and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-tablet</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Tablet and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-laptop</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Laptop and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-desktop</code>
+                                        </td>
+                                        <td class="px-6 py-4">1300px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Desktop and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-wide-screen</code>
+                                        </td>
+                                        <td class="px-6 py-4">1540px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Wide screen and up</td>
                                     </tr>
                                     <tr class="hover:bg-dark-bg transition-colors">
                                         <td class="px-6 py-4"><code
-                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.hide-up-md</code>
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-ultra</code>
                                         </td>
-                                        <td class="px-6 py-4">768px+</td>
-                                        <td class="px-6 py-4 text-dark-muted">Hidden from tablets and up</td>
+                                        <td class="px-6 py-4">1920px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Ultra-wide and up</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <div class="mt-4 bg-dark-bg p-4 rounded-lg">
+                            <p class="text-sm text-dark-muted mb-2">Example:</p>
+                            <pre class="text-cyan-400"><code>&lt;!-- Hidden on mobile, visible on tablet and up --&gt;
+        &lt;div class="break-up-tablet"&gt;
+          Visible on tablets and larger screens
+        &lt;/div&gt;</code></pre>
+                        </div>
                     </div>
 
+                    <!-- Mobile-First Hide Classes -->
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4">Desktop-First Classes</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Mobile-First Hide Classes (hide-up-*)</h3>
+                        <p class="text-dark-muted mb-4">Hide elements at breakpoint and above (min-width).</p>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left">
                                 <thead class="bg-dark-bg">
                                     <tr>
                                         <th class="px-6 py-4 font-semibold">Class</th>
-                                        <th class="px-6 py-4 font-semibold">Shows At</th>
-                                        <th class="px-6 py-4 font-semibold">Example</th>
+                                        <th class="px-6 py-4 font-semibold">Breakpoint</th>
+                                        <th class="px-6 py-4 font-semibold">Hides At</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
                                         <td class="px-6 py-4"><code
-                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-down-md</code>
+                                                class="bg-dark-bg px-2 py-1 rounded text-red-400">.hide-up-sm</code>
                                         </td>
-                                        <td class="px-6 py-4">768px and below</td>
-                                        <td class="px-6 py-4 text-dark-muted">Visible up to tablets</td>
+                                        <td class="px-6 py-4">576px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden from small devices up</td>
                                     </tr>
                                     <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
                                         <td class="px-6 py-4"><code
-                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-down-lg</code>
+                                                class="bg-dark-bg px-2 py-1 rounded text-red-400">.hide-up-md</code>
                                         </td>
-                                        <td class="px-6 py-4">1024px and below</td>
-                                        <td class="px-6 py-4 text-dark-muted">Visible up to laptops</td>
+                                        <td class="px-6 py-4">768px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden from medium devices up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-red-400">.hide-up-lg</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden from large devices up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-red-400">.hide-up-xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1200px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden from XL devices up</td>
                                     </tr>
                                     <tr class="hover:bg-dark-bg transition-colors">
                                         <td class="px-6 py-4"><code
-                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.hide-down-md</code>
+                                                class="bg-dark-bg px-2 py-1 rounded text-red-400">.hide-up-2xl</code>
                                         </td>
-                                        <td class="px-6 py-4">768px and below</td>
-                                        <td class="px-6 py-4 text-dark-muted">Hidden on tablets and smaller</td>
+                                        <td class="px-6 py-4">1536px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden from 2XL devices up</td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="mt-4 bg-dark-bg p-4 rounded-lg">
+                            <p class="text-sm text-dark-muted mb-2">Example:</p>
+                            <pre class="text-cyan-400"><code>&lt;!-- Visible on mobile, hidden on tablet and up --&gt;
+        &lt;button class="hide-up-tablet"&gt;Mobile Menu&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Desktop-First Classes -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-400">Desktop-First Classes (break-down-*)
+                        </h3>
+                        <p class="text-dark-muted mb-4">Show elements at breakpoint and below (max-width).</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-dark-bg">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Class</th>
+                                        <th class="px-6 py-4 font-semibold">Breakpoint</th>
+                                        <th class="px-6 py-4 font-semibold">Shows At</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-sm</code>
+                                        </td>
+                                        <td class="px-6 py-4">576px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Small devices and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-md</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Medium devices and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-lg</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Large devices and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1200px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">XL devices and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-2xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1536px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">2XL devices and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-mobile</code>
+                                        </td>
+                                        <td class="px-6 py-4">520px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Mobile only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-tablet</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Tablet and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-laptop</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Laptop and smaller</td>
+                                    </tr>
+                                    <tr class="hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-purple-400">.break-down-desktop</code>
+                                        </td>
+                                        <td class="px-6 py-4">1300px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Desktop and smaller</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 bg-dark-bg p-4 rounded-lg">
+                            <p class="text-sm text-dark-muted mb-2">Example:</p>
+                            <pre class="text-cyan-400"><code>&lt;!-- Visible up to 768px, hidden on larger screens --&gt;
+        &lt;nav class="break-down-tablet"&gt;Mobile Navigation&lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Desktop-First Hide Classes -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-orange-400">Desktop-First Hide Classes (hide-down-*)
+                        </h3>
+                        <p class="text-dark-muted mb-4">Hide elements at breakpoint and below (max-width).</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-dark-bg">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Class</th>
+                                        <th class="px-6 py-4 font-semibold">Breakpoint</th>
+                                        <th class="px-6 py-4 font-semibold">Hides At</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-orange-400">.hide-down-sm</code>
+                                        </td>
+                                        <td class="px-6 py-4">576px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden on small and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-orange-400">.hide-down-md</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden on medium and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-orange-400">.hide-down-lg</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden on large and smaller</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-orange-400">.hide-down-xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1200px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden on XL and smaller</td>
+                                    </tr>
+                                    <tr class="hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-orange-400">.hide-down-2xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1536px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden on 2XL and smaller</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 bg-dark-bg p-4 rounded-lg">
+                            <p class="text-sm text-dark-muted mb-2">Example:</p>
+                            <pre class="text-cyan-400"><code>&lt;!-- Hidden on mobile, visible on desktop --&gt;
+        &lt;aside class="hide-down-laptop"&gt;Desktop Sidebar&lt;/aside&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Breakpoint-Only Classes -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">Breakpoint-Only Classes (break-only-*)
+                        </h3>
+                        <p class="text-dark-muted mb-4">Show elements only within a specific breakpoint range.</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-dark-bg">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Class</th>
+                                        <th class="px-6 py-4 font-semibold">Range</th>
+                                        <th class="px-6 py-4 font-semibold">Shows Between</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-xs</code>
+                                        </td>
+                                        <td class="px-6 py-4">0-575px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Extra small only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-sm</code>
+                                        </td>
+                                        <td class="px-6 py-4">576-767px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Small only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-md</code>
+                                        </td>
+                                        <td class="px-6 py-4">768-1023px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Medium only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-lg</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024-1199px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Large only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1200-1535px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Extra large only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-2xl</code>
+                                        </td>
+                                        <td class="px-6 py-4">1536px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">2X large only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-mobile</code>
+                                        </td>
+                                        <td class="px-6 py-4">520-767px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Mobile range only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-tablet</code>
+                                        </td>
+                                        <td class="px-6 py-4">768-1023px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Tablet range only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-laptop</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024-1299px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Laptop range only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-desktop</code>
+                                        </td>
+                                        <td class="px-6 py-4">1300-1539px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Desktop range only</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-wide-screen</code>
+                                        </td>
+                                        <td class="px-6 py-4">1540-1919px</td>
+                                        <td class="px-6 py-4 text-dark-muted">Wide screen range only</td>
+                                    </tr>
+                                    <tr class="hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-green-400">.break-only-ultra</code>
+                                        </td>
+                                        <td class="px-6 py-4">1920px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Ultra-wide only</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 bg-dark-bg p-4 rounded-lg">
+                            <p class="text-sm text-dark-muted mb-2">Example:</p>
+                            <pre class="text-cyan-400"><code>&lt;!-- Only visible on tablets (768-1023px) --&gt;
+        &lt;div class="break-only-tablet"&gt;Tablet-specific content&lt;/div&gt;</code></pre>
+                        </div>
+                        <p class="text-sm text-dark-muted mt-4">Breakpoint-Only Hide Classes (hide-only-*) are also
+                            available to
+                            hide elements only within specific ranges.</p>
+                    </div>
+
+                    <!-- Orientation Classes -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Orientation Classes</h3>
+                        <p class="text-dark-muted mb-4">Control visibility based on device orientation.</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-dark-bg">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Class</th>
+                                        <th class="px-6 py-4 font-semibold">Shows When</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-yellow-400">.break-portrait</code>
+                                        </td>
+                                        <td class="px-6 py-4 text-dark-muted">Portrait orientation</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-yellow-400">.break-landscape</code>
+                                        </td>
+                                        <td class="px-6 py-4 text-dark-muted">Landscape orientation</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-yellow-400">.hide-portrait</code>
+                                        </td>
+                                        <td class="px-6 py-4 text-dark-muted">Hide in portrait</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-yellow-400">.hide-landscape</code>
+                                        </td>
+                                        <td class="px-6 py-4 text-dark-muted">Hide in landscape</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-yellow-400">.break-md-landscape</code>
+                                        </td>
+                                        <td class="px-6 py-4 text-dark-muted">Medium+ and landscape</td>
+                                    </tr>
+                                    <tr class="hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-yellow-400">.break-lg-portrait</code>
+                                        </td>
+                                        <td class="px-6 py-4 text-dark-muted">Large+ and portrait</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 bg-dark-bg p-4 rounded-lg">
+                            <p class="text-sm text-dark-muted mb-2">Examples:</p>
+                            <pre class="text-cyan-400"><code>&lt;!-- Only visible in landscape mode --&gt;
+        &lt;div class="break-landscape"&gt;
+          Landscape-optimized video player
+        &lt;/div&gt;
+        
+        &lt;!-- Only visible in portrait on tablets+ --&gt;
+        &lt;div class="break-lg-portrait"&gt;
+          Portrait sidebar for large screens
+        &lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Display Type Modifiers -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-400">Display Type Modifiers</h3>
+                        <p class="text-dark-muted mb-4">Combine with breakpoint classes to set specific display types.
+                        </p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-dark-bg">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Modifier</th>
+                                        <th class="px-6 py-4 font-semibold">Display Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-pink-400">.inline</code></td>
+                                        <td class="px-6 py-4 text-dark-muted">display: inline !important</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-pink-400">.inline-block</code>
+                                        </td>
+                                        <td class="px-6 py-4 text-dark-muted">display: inline-block !important</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-pink-400">.flex</code></td>
+                                        <td class="px-6 py-4 text-dark-muted">display: flex !important</td>
+                                    </tr>
+                                    <tr class="hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-pink-400">.grid</code></td>
+                                        <td class="px-6 py-4 text-dark-muted">display: grid !important</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 bg-dark-bg p-4 rounded-lg">
+                            <p class="text-sm text-dark-muted mb-2">Examples:</p>
+                            <pre class="text-cyan-400"><code>&lt;!-- Block on mobile, flex on medium+ --&gt;
+        &lt;div class="break-up-md flex"&gt;
+          Responsive flex container
+        &lt;/div&gt;
+        
+        &lt;!-- Block on mobile, grid on large+ --&gt;
+        &lt;div class="break-up-lg grid"&gt;
+          Responsive grid container
+        &lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -600,75 +1413,543 @@
                     <p class="text-dark-muted">
                         Utility classes use !important to ensure they override component styles. This is intentional for
                         maximum
-                        flexibility.
+                        flexibility in responsive design.
                     </p>
                 </div>
             </div>
         </section>
 
         <section id="examples" class="mb-16">
-            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl border border-dark-border">
                 <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
                     <i class="fas fa-code text-cyan-400"></i>
                     Real-World Examples
                 </h2>
 
-                <div class="space-y-8">
+                <div class="space-y-12">
+                    <!-- Example 1: Responsive Navigation -->
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4">Responsive Navigation</h3>
-                        <div class="bg-dark-bg rounded-lg p-6 relative">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-cyan-400 text-sm font-semibold uppercase">HTML</span>
-                                <button onclick="copyCode(this)"
-                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
-                                    <i class="fas fa-copy mr-1"></i>Copy
-                                </button>
+                        <h3 class="text-2xl font-semibold mb-4 text-cyan-400">1. Responsive Navigation</h3>
+                        <p class="text-dark-muted mb-4">Mobile menu toggle button appears on small screens, while full
+                            navigation shows on larger screens.</p>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <!-- Code Section -->
+                            <div class="bg-dark-bg rounded-lg p-6 border border-dark-border">
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-cyan-400 text-sm font-semibold uppercase">HTML</span>
+                                    <button onclick="copyCode(this)"
+                                        class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded text-sm transition-colors">
+                                        <i class="fas fa-copy mr-1"></i>Copy
+                                    </button>
+                                </div>
+                                <pre class="text-green-400 overflow-x-auto text-sm"><code>&lt;!-- Mobile menu toggle --&gt;
+        &lt;button class="menu-toggle hide-up-lg" 
+                onclick="toggleMenu()"&gt;
+          ☰ Menu
+        &lt;/button&gt;
+        
+        &lt;!-- Mobile dropdown menu --&gt;
+        &lt;nav id="mobileMenu" 
+             class="mobile-menu hide-up-lg"&gt;
+          &lt;a href="#home"&gt;Home&lt;/a&gt;
+          &lt;a href="#about"&gt;About&lt;/a&gt;
+          &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+        
+        &lt;!-- Desktop navigation --&gt;
+        &lt;nav class="main-nav hide-down-lg"&gt;
+          &lt;a href="#home"&gt;Home&lt;/a&gt;
+          &lt;a href="#about"&gt;About&lt;/a&gt;
+          &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+        
+        &lt;script&gt;
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('active');
+        }
+        &lt;/script&gt;</code></pre>
                             </div>
-                            <pre class="text-green-400 overflow-x-auto"><code>&lt;!-- Mobile menu toggle --&gt;
-                &lt;button class="menu-toggle hide-up-lg"&gt;☰ Menu&lt;/button&gt;
-                
-                &lt;!-- Desktop navigation --&gt;
-                &lt;nav class="main-nav hide-down-lg"&gt;
-                  &lt;a href="#home"&gt;Home&lt;/a&gt;
-                  &lt;a href="#about"&gt;About&lt;/a&gt;
-                  &lt;a href="#contact"&gt;Contact&lt;/a&gt;
-                &lt;/nav&gt;</code></pre>
+
+                            <!-- Output Section with Resizer -->
+                            <div class="bg-dark-bg rounded-lg border border-dark-border overflow-hidden">
+                                <div class="flex justify-between items-center p-4 border-b border-dark-border">
+                                    <span class="text-purple-400 text-sm font-semibold uppercase">LIVE OUTPUT</span>
+                                    <div class="flex items-center gap-2">
+                                        <button onclick="resizeFrame('frame1', 375)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            📱 Mobile
+                                        </button>
+                                        <button onclick="resizeFrame('frame1', 768)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            💻 Tablet
+                                        </button>
+                                        <button onclick="resizeFrame('frame1', 1024)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            🖥️ Desktop
+                                        </button>
+                                        <button onclick="resizeFrame('frame1', '100%')"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            ↔️ Full
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <div class="resize-container overflow-y-auto">
+                                        <iframe id="frame1" class="output-frame" srcdoc='
+                                        <!DOCTYPE html>
+                                        <html>
+                                        <head>
+                                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css">
+                                            <style>
+                                                * { margin: 0; padding: 0; box-sizing: border-box; }
+                                                body { 
+                                                    font-family: Inter, sans-serif; 
+                                                    background: #0f172a; 
+                                                    color: #e2e8f0;
+                                                    padding: 20px;
+                                                }
+                                                .menu-toggle {
+                                                    background: #22d3ee;
+                                                    color: #0f172a;
+                                                    border: none;
+                                                    padding: 12px 24px;
+                                                    border-radius: 8px;
+                                                    font-weight: 600;
+                                                    cursor: pointer;
+                                                    font-size: 16px;
+                                                    transition: all 0.3s;
+                                                    width: 100%;
+                                                }
+                                                .menu-toggle:hover {
+                                                    background: #06b6d4;
+                                                    transform: translateY(-2px);
+                                                }
+                                                .mobile-menu {
+                                                    display: none;
+                                                    flex-direction: column;
+                                                    gap: 0;
+                                                    background: rgba(34, 211, 238, 0.1);
+                                                    border: 1px solid rgba(34, 211, 238, 0.3);
+                                                    border-radius: 8px;
+                                                    margin-top: 12px;
+                                                    overflow: hidden;
+                                                }
+                                                .mobile-menu.active {
+                                                    display: flex;
+                                                    animation: slideDown 0.3s ease-out;
+                                                }
+                                                @keyframes slideDown {
+                                                    from {
+                                                        opacity: 0;
+                                                        transform: translateY(-10px);
+                                                    }
+                                                    to {
+                                                        opacity: 1;
+                                                        transform: translateY(0);
+                                                    }
+                                                }
+                                                .mobile-menu a {
+                                                    color: #22d3ee;
+                                                    text-decoration: none;
+                                                    padding: 16px 20px;
+                                                    font-weight: 500;
+                                                    transition: all 0.3s;
+                                                    border-bottom: 1px solid rgba(34, 211, 238, 0.2);
+                                                }
+                                                .mobile-menu a:last-child {
+                                                    border-bottom: none;
+                                                }
+                                                .mobile-menu a:hover {
+                                                    background: rgba(34, 211, 238, 0.2);
+                                                    padding-left: 30px;
+                                                }
+                                                .main-nav {
+                                                    display: flex;
+                                                    gap: 32px;
+                                                    background: rgba(34, 211, 238, 0.1);
+                                                    padding: 16px 32px;
+                                                    border-radius: 8px;
+                                                    border: 1px solid rgba(34, 211, 238, 0.3);
+                                                    justify-content: center;
+                                                }
+                                                .main-nav a {
+                                                    color: #22d3ee;
+                                                    text-decoration: none;
+                                                    font-weight: 500;
+                                                    transition: all 0.3s;
+                                                    padding: 8px 16px;
+                                                    border-radius: 4px;
+                                                }
+                                                .main-nav a:hover {
+                                                    background: rgba(34, 211, 238, 0.2);
+                                                    transform: translateY(-2px);
+                                                }
+                                            </style>
+                                        </head>
+                                        <body>
+                                            <button class="menu-toggle hide-up-lg" onclick="toggleMenu()">
+                                                ☰ Menu
+                                            </button>
+                                            
+                                            <nav id="mobileMenu" class="mobile-menu hide-up-lg">
+                                                <a href="#home">🏠 Home</a>
+                                                <a href="#about">ℹ️ About</a>
+                                                <a href="#contact">📧 Contact</a>
+                                            </nav>
+                                            
+                                            <nav class="main-nav hide-down-lg">
+                                                <a href="#home">🏠 Home</a>
+                                                <a href="#about">ℹ️ About</a>
+                                                <a href="#contact">📧 Contact</a>
+                                            </nav>
+                                            
+                                            <script>
+                                                function toggleMenu() {
+                                                    const menu = document.getElementById("mobileMenu");
+                                                    menu.classList.toggle("active");
+                                                }
+                                            </script>
+                                        </body>
+                                        </html>
+                                        '></iframe>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Example 2: Responsive Grid -->
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4">Responsive Grid with SCSS</h3>
-                        <div class="bg-dark-bg rounded-lg p-6 relative">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-cyan-400 text-sm font-semibold uppercase">SCSS</span>
-                                <button onclick="copyCode(this)"
-                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
-                                    <i class="fas fa-copy mr-1"></i>Copy
-                                </button>
+                        <h3 class="text-2xl font-semibold mb-4 text-cyan-400">2. Responsive Product Grid</h3>
+                        <p class="text-dark-muted mb-4">Grid that adapts from 1 column on mobile to 4 columns on
+                            extra-large
+                            screens.</p>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <!-- Code Section -->
+                            <div class="bg-dark-bg rounded-lg p-6 border border-dark-border">
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-cyan-400 text-sm font-semibold uppercase">CSS</span>
+                                    <button onclick="copyCode(this)"
+                                        class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded text-sm transition-colors">
+                                        <i class="fas fa-copy mr-1"></i>Copy
+                                    </button>
+                                </div>
+                                <pre class="text-green-400 overflow-x-auto text-sm"><code>.product-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+        
+        /* 576px+ (sm) */
+        @media (min-width: 36em) {
+          .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        
+        /* 768px+ (md) */
+        @media (min-width: 48em) {
+          .product-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+          }
+        }
+        
+        /* 1200px+ (xl) */
+        @media (min-width: 75em) {
+          .product-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }</code></pre>
                             </div>
-                            <pre class="text-purple-400 overflow-x-auto"><code>.product-grid {
-                  display: grid;
-                  grid-template-columns: 1fr;
-                  gap: 1rem;
-                  
-                  @include break-up(sm) {
-                    grid-template-columns: repeat(2, 1fr);
-                  }
-                  
-                  @include break-up(md) {
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 2rem;
-                  }
-                  
-                  @include break-up(xl) {
-                    grid-template-columns: repeat(4, 1fr);
-                  }
-                }</code></pre>
+
+                            <!-- Output Section with Resizer -->
+                            <div class="bg-dark-bg rounded-lg border border-dark-border overflow-hidden">
+                                <div class="flex justify-between items-center p-4 border-b border-dark-border">
+                                    <span class="text-purple-400 text-sm font-semibold uppercase">LIVE OUTPUT</span>
+                                    <div class="flex items-center gap-2">
+                                        <button onclick="resizeFrame('frame2', 375)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            📱 Mobile
+                                        </button>
+                                        <button onclick="resizeFrame('frame2', 768)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            💻 Tablet
+                                        </button>
+                                        <button onclick="resizeFrame('frame2', 1024)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            🖥️ Desktop
+                                        </button>
+                                        <button onclick="resizeFrame('frame2', '100%')"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            ↔️ Full
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <div class="resize-container">
+                                        <iframe id="frame2" class="output-frame" srcdoc='
+                                        <!DOCTYPE html>
+                                        <html>
+                                        <head>
+                                            <style>
+                                                * { margin: 0; padding: 0; box-sizing: border-box; }
+                                                body { 
+                                                    font-family: Inter, sans-serif; 
+                                                    background: #0f172a; 
+                                                    color: #e2e8f0;
+                                                    padding: 20px;
+                                                }
+                                                .product-grid {
+                                                    display: grid;
+                                                    grid-template-columns: 1fr;
+                                                    gap: 1rem;
+                                                }
+                                                @media (min-width: 36em) {
+                                                    .product-grid {
+                                                        grid-template-columns: repeat(2, 1fr);
+                                                    }
+                                                }
+                                                @media (min-width: 48em) {
+                                                    .product-grid {
+                                                        grid-template-columns: repeat(3, 1fr);
+                                                        gap: 1.5rem;
+                                                    }
+                                                }
+                                                @media (min-width: 75em) {
+                                                    .product-grid {
+                                                        grid-template-columns: repeat(4, 1fr);
+                                                    }
+                                                }
+                                                .product-card {
+                                                    background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(147, 51, 234, 0.1));
+                                                    border: 1px solid rgba(34, 211, 238, 0.3);
+                                                    padding: 2rem 1rem;
+                                                    border-radius: 8px;
+                                                    text-align: center;
+                                                    font-weight: 600;
+                                                    color: #22d3ee;
+                                                    transition: all 0.3s;
+                                                }
+                                                .product-card:hover {
+                                                    transform: translateY(-4px);
+                                                    box-shadow: 0 10px 25px rgba(34, 211, 238, 0.2);
+                                                }
+                                                .product-card i {
+                                                    font-size: 2rem;
+                                                    display: block;
+                                                    margin-bottom: 0.5rem;
+                                                }
+                                            </style>
+                                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+                                        </head>
+                                        <body>
+                                            <div class="product-grid">
+                                                <div class="product-card">
+                                                    <i class="fas fa-laptop"></i>
+                                                    Product 1
+                                                </div>
+                                                <div class="product-card">
+                                                    <i class="fas fa-mobile-alt"></i>
+                                                    Product 2
+                                                </div>
+                                                <div class="product-card">
+                                                    <i class="fas fa-tablet-alt"></i>
+                                                    Product 3
+                                                </div>
+                                                <div class="product-card">
+                                                    <i class="fas fa-desktop"></i>
+                                                    Product 4
+                                                </div>
+                                            </div>
+                                        </body>
+                                        </html>
+                                        '></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 3: Visibility Utilities -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-cyan-400">3. Show/Hide Utilities</h3>
+                        <p class="text-dark-muted mb-4">Control element visibility across different screen sizes using
+                            Mastors
+                            Fluider classes.</p>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <!-- Code Section -->
+                            <div class="bg-dark-bg rounded-lg p-6 border border-dark-border">
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-cyan-400 text-sm font-semibold uppercase">HTML</span>
+                                    <button onclick="copyCode(this)"
+                                        class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded text-sm transition-colors">
+                                        <i class="fas fa-copy mr-1"></i>Copy
+                                    </button>
+                                </div>
+                                <pre class="text-green-400 overflow-x-auto text-sm"><code>&lt;!-- Show only on mobile --&gt;
+        &lt;div class="hide-up-md"&gt;
+          📱 Mobile Only (0-767px)
+        &lt;/div&gt;
+        
+        &lt;!-- Show only on tablet+ --&gt;
+        &lt;div class="break-up-md hide-up-xl"&gt;
+          💻 Tablet & Laptop (768-1199px)
+        &lt;/div&gt;
+        
+        &lt;!-- Show only on desktop --&gt;
+        &lt;div class="break-up-xl"&gt;
+          🖥️ Desktop Only (1200px+)
+        &lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- Output Section with Resizer -->
+                            <div class="bg-dark-bg rounded-lg border border-dark-border overflow-hidden">
+                                <div class="flex justify-between items-center p-4 border-b border-dark-border">
+                                    <span class="text-purple-400 text-sm font-semibold uppercase">LIVE OUTPUT</span>
+                                    <div class="flex items-center gap-2">
+                                        <button onclick="resizeFrame('frame3', 375)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            📱 Mobile
+                                        </button>
+                                        <button onclick="resizeFrame('frame3', 768)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            💻 Tablet
+                                        </button>
+                                        <button onclick="resizeFrame('frame3', 1024)"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            🖥️ Desktop
+                                        </button>
+                                        <button onclick="resizeFrame('frame3', '100%')"
+                                            class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition-colors">
+                                            ↔️ Full
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <div class="resize-container">
+                                        <iframe id="frame3" class="output-frame" srcdoc='
+                                        <!DOCTYPE html>
+                                        <html>
+                                        <head>
+                                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css">
+                                            <style>
+                                                * { margin: 0; padding: 0; box-sizing: border-box; }
+                                                body { 
+                                                    font-family: Inter, sans-serif; 
+                                                    background: #0f172a; 
+                                                    color: #e2e8f0;
+                                                    padding: 20px;
+                                                }
+                                                .device-box {
+                                                    padding: 24px;
+                                                    border-radius: 8px;
+                                                    text-align: center;
+                                                    font-weight: 600;
+                                                    margin-bottom: 16px;
+                                                    transition: all 0.3s;
+                                                }
+                                                .device-box:hover {
+                                                    transform: scale(1.02);
+                                                }
+                                                .mobile-box {
+                                                    background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(239, 68, 68, 0.2));
+                                                    border: 1px solid rgba(236, 72, 153, 0.4);
+                                                    color: #f9a8d4;
+                                                }
+                                                .tablet-box {
+                                                    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(34, 211, 238, 0.2));
+                                                    border: 1px solid rgba(59, 130, 246, 0.4);
+                                                    color: #93c5fd;
+                                                }
+                                                .desktop-box {
+                                                    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.2));
+                                                    border: 1px solid rgba(168, 85, 247, 0.4);
+                                                    color: #c4b5fd;
+                                                }
+                                                .icon {
+                                                    font-size: 2rem;
+                                                    display: block;
+                                                    margin-bottom: 8px;
+                                                }
+                                            </style>
+                                        </head>
+                                        <body>
+                                            <div class="device-box mobile-box hide-up-md">
+                                                <span class="icon">📱</span>
+                                                Mobile Only (0-767px)
+                                            </div>
+                                            
+                                            <div class="device-box tablet-box break-up-md hide-up-xl">
+                                                <span class="icon">💻</span>
+                                                Tablet & Laptop (768-1199px)
+                                            </div>
+                                            
+                                            <div class="device-box desktop-box break-up-xl">
+                                                <span class="icon">🖥️</span>
+                                                Desktop Only (1200px+)
+                                            </div>
+                                        </body>
+                                        </html>
+                                        '></iframe>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <style>
+            .resize-container {
+                background: #1e293b;
+                border-radius: 8px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .output-frame {
+                width: 100%;
+                height: 300px;
+                border: none;
+                background: white;
+                display: block;
+                transition: width 0.3s ease;
+                margin: 0 auto;
+            }
+        </style>
+
+        <script>
+            function copyCode(button) {
+                const codeBlock = button.closest('.bg-dark-bg').querySelector('code');
+                const text = codeBlock.textContent;
+
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalHTML = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check mr-1"></i>Copied!';
+                    button.classList.add('bg-green-500/20');
+
+                    setTimeout(() => {
+                        button.innerHTML = originalHTML;
+                        button.classList.remove('bg-green-500/20');
+                    }, 2000);
+                });
+            }
+
+            function resizeFrame(frameId, width) {
+                const frame = document.getElementById(frameId);
+                if (width === '100%') {
+                    frame.style.width = '100%';
+                } else {
+                    frame.style.width = width + 'px';
+                }
+            }
+        </script>
 
         <section id="changelog" class="mb-16">
             <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
@@ -923,6 +2204,88 @@
     </footer>
 
     <script>
+        // Smooth scroll with center positioning
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = window.innerHeight / 2 - target.offsetHeight / 2;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition),
+                        behavior: 'smooth'
+                    });
+
+                    // Update active nav link
+                    updateActiveNav(this);
+
+                    // Center the nav link
+                    centerNavLink(this);
+                }
+            });
+        });
+
+        // Update active navigation link
+        function updateActiveNav(activeLink) {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('text-white', 'bg-white/10');
+                link.classList.add('text-dark-muted');
+            });
+            console.log('idadz')
+
+            activeLink.classList.remove('text-dark-muted');
+            activeLink.classList.add('text-white', 'bg-white/10');
+        }
+
+        // Center navigation link in viewport
+        function centerNavLink(link) {
+            const navContainer = document.getElementById('navContainer');
+            const linkRect = link.getBoundingClientRect();
+            const containerRect = navContainer.getBoundingClientRect();
+
+            const scrollLeft = navContainer.scrollLeft;
+            const linkCenter = linkRect.left - containerRect.left + linkRect.width / 2;
+            const containerCenter = containerRect.width / 2;
+
+            navContainer.scrollTo({
+                left: scrollLeft + linkCenter - containerCenter,
+                behavior: 'smooth'
+            });
+        }
+
+        // Highlight current section on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-white', 'bg-white/10');
+                link.classList.add('text-dark-muted');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.remove('text-dark-muted');
+                    link.classList.add('text-white', 'bg-white/10');
+
+                    console.log('idadz')
+                    // Auto-center on scroll
+                    if (!link.classList.contains('manually-clicked')) {
+                        centerNavLink(link);
+                    }
+                }
+            });
+        });
+
+        // Copy code functionality
         function copyCode(button) {
             const codeBlock = button.closest('div').parentElement;
             const code = codeBlock.querySelector('pre code').textContent;
@@ -940,43 +2303,6 @@
                 }, 2000);
             });
         }
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = 80;
-                    const targetPosition = target.offsetTop - offset;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-white');
-                link.classList.add('text-dark-muted');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.remove('text-dark-muted');
-                    link.classList.add('text-white');
-                }
-            });
-        });
     </script>
 </body>
 
