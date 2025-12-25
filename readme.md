@@ -1052,19 +1052,38 @@ Free to use in personal and commercial projects.
 Found an issue or have a suggestion? Feel free to improve this utility!
 
 ---
+## 📋 Changelog
 
-**Version:** 1.0.0  
-**Last Updated:** 25 December, 2025  
-**Changelog:**
-- Added comprehensive CSS utility classes
-- Added display type modifiers (flex, grid, inline, inline-block)
-- Added orientation-specific classes
-- Enhanced documentation with CSS class examples
-- Added FAQ for CSS-specific questions
+### Version 1.0.5
+**Released:** December 26, 2025
 
-**Version:** 1.0.5  
-**Last Updated:** 26 December, 2025  
-**Changelog:**
-- Added npm package
-- readme.md updated
-- documentation updated
+#### ✨ New Features
+- 📦 Added NPM package for easy installation
+- 📚 Updated readme.md with comprehensive documentation
+- 🎨 Enhanced documentation with better examples and structure
+- 🌐 Added CDN support via jsDelivr
+
+#### 📊 File Sizes
+- **mastors-fluider.scss:** ~5KB
+- **mastors-fluider.css:** ~11KB (~3-4KB gzipped)
+
+---
+
+### Version 1.0.0
+**Released:** December 25, 2025 - Initial Release
+
+#### 🎉 Initial Features
+- ⭐ 12 predefined breakpoints (6 core + 6 custom)
+- ⭐ 6 SCSS mixins for flexible responsive design
+- ⭐ 100+ CSS utility classes
+- ⭐ Mobile-first approach with em units
+- ⭐ Comprehensive CSS utility classes
+- ⭐ Display type modifiers (flex, grid, inline, inline-block)
+- ⭐ Orientation-specific classes
+- ⭐ Enhanced documentation with CSS class examples
+- ⭐ Added FAQ for CSS-specific questions
+
+---
+
+**License:** Free to Use  
+**Maintained by:** KEHEM-IT
