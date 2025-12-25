@@ -6,7 +6,7 @@ Modern, accessible breakpoint system for responsive design using mobile-first ap
 
 - [Installation](#-installation)
 - [Available Breakpoints](#-available-breakpoints)
-- [SCSS Mixins](#-scss-mixins)
+- [SCSS Mixins](#break-upsize)
 - [SCSS Functions](#-scss-functions)
 - [CSS Utility Classes](#-css-utility-classes)
 - [Usage Examples](#-usage-examples)
