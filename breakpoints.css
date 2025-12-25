@@ -1,0 +1,499 @@
+/* ============================================
+   BREAKPOINT UTILITY CLASSES
+   Mobile-first responsive design system
+   ============================================ */
+
+/* -------------- BREAKPOINT VALUES -------------- */
+/* 
+   xs: 0px
+   sm: 576px (36em)
+   md: 768px (48em)
+   lg: 1024px (64em)
+   xl: 1200px (75em)
+   2xl: 1536px (96em)
+   mobile: 520px (32.5em)
+   tablet: 768px (48em)
+   laptop: 1024px (64em)
+   desktop: 1300px (81.25em)
+   wide-screen: 1540px (96.25em)
+   ultra: 1920px (120em)
+*/
+
+/* ============================================
+   MOBILE-FIRST (MIN-WIDTH) UTILITIES
+   Usage: Add class to show/hide at breakpoint and above
+   ============================================ */
+
+/* Extra Small (0px+) - Always visible by default */
+.break-up-xs {
+  display: block !important;
+}
+
+/* Small (576px+) */
+@media (min-width: 36em) {
+  .break-up-sm {
+    display: block !important;
+  }
+  .hide-up-sm {
+    display: none !important;
+  }
+}
+
+/* Medium (768px+) */
+@media (min-width: 48em) {
+  .break-up-md {
+    display: block !important;
+  }
+  .hide-up-md {
+    display: none !important;
+  }
+}
+
+/* Large (1024px+) */
+@media (min-width: 64em) {
+  .break-up-lg {
+    display: block !important;
+  }
+  .hide-up-lg {
+    display: none !important;
+  }
+}
+
+/* Extra Large (1200px+) */
+@media (min-width: 75em) {
+  .break-up-xl {
+    display: block !important;
+  }
+  .hide-up-xl {
+    display: none !important;
+  }
+}
+
+/* 2X Large (1536px+) */
+@media (min-width: 96em) {
+  .break-up-2xl {
+    display: block !important;
+  }
+  .hide-up-2xl {
+    display: none !important;
+  }
+}
+
+/* Mobile (520px+) */
+@media (min-width: 32.5em) {
+  .break-up-mobile {
+    display: block !important;
+  }
+  .hide-up-mobile {
+    display: none !important;
+  }
+}
+
+/* Tablet (768px+) */
+@media (min-width: 48em) {
+  .break-up-tablet {
+    display: block !important;
+  }
+  .hide-up-tablet {
+    display: none !important;
+  }
+}
+
+/* Laptop (1024px+) */
+@media (min-width: 64em) {
+  .break-up-laptop {
+    display: block !important;
+  }
+  .hide-up-laptop {
+    display: none !important;
+  }
+}
+
+/* Desktop (1300px+) */
+@media (min-width: 81.25em) {
+  .break-up-desktop {
+    display: block !important;
+  }
+  .hide-up-desktop {
+    display: none !important;
+  }
+}
+
+/* Wide Screen (1540px+) */
+@media (min-width: 96.25em) {
+  .break-up-wide-screen {
+    display: block !important;
+  }
+  .hide-up-wide-screen {
+    display: none !important;
+  }
+}
+
+/* Ultra (1920px+) */
+@media (min-width: 120em) {
+  .break-up-ultra {
+    display: block !important;
+  }
+  .hide-up-ultra {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   DESKTOP-FIRST (MAX-WIDTH) UTILITIES
+   Usage: Add class to show/hide at breakpoint and below
+   ============================================ */
+
+/* Small (575px and below) */
+@media (max-width: 36em) {
+  .break-down-sm {
+    display: block !important;
+  }
+  .hide-down-sm {
+    display: none !important;
+  }
+}
+
+/* Medium (767px and below) */
+@media (max-width: 48em) {
+  .break-down-md {
+    display: block !important;
+  }
+  .hide-down-md {
+    display: none !important;
+  }
+}
+
+/* Large (1023px and below) */
+@media (max-width: 64em) {
+  .break-down-lg {
+    display: block !important;
+  }
+  .hide-down-lg {
+    display: none !important;
+  }
+}
+
+/* Extra Large (1199px and below) */
+@media (max-width: 75em) {
+  .break-down-xl {
+    display: block !important;
+  }
+  .hide-down-xl {
+    display: none !important;
+  }
+}
+
+/* 2X Large (1535px and below) */
+@media (max-width: 96em) {
+  .break-down-2xl {
+    display: block !important;
+  }
+  .hide-down-2xl {
+    display: none !important;
+  }
+}
+
+/* Mobile (519px and below) */
+@media (max-width: 32.5em) {
+  .break-down-mobile {
+    display: block !important;
+  }
+  .hide-down-mobile {
+    display: none !important;
+  }
+}
+
+/* Tablet (767px and below) */
+@media (max-width: 48em) {
+  .break-down-tablet {
+    display: block !important;
+  }
+  .hide-down-tablet {
+    display: none !important;
+  }
+}
+
+/* Laptop (1023px and below) */
+@media (max-width: 64em) {
+  .break-down-laptop {
+    display: block !important;
+  }
+  .hide-down-laptop {
+    display: none !important;
+  }
+}
+
+/* Desktop (1299px and below) */
+@media (max-width: 81.25em) {
+  .break-down-desktop {
+    display: block !important;
+  }
+  .hide-down-desktop {
+    display: none !important;
+  }
+}
+
+/* Wide Screen (1539px and below) */
+@media (max-width: 96.25em) {
+  .break-down-wide-screen {
+    display: block !important;
+  }
+  .hide-down-wide-screen {
+    display: none !important;
+  }
+}
+
+/* Ultra (1919px and below) */
+@media (max-width: 120em) {
+  .break-down-ultra {
+    display: block !important;
+  }
+  .hide-down-ultra {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   BREAKPOINT ONLY UTILITIES
+   Usage: Show/hide only within specific breakpoint range
+   ============================================ */
+
+/* XS Only (0-575px) */
+@media (min-width: 0) and (max-width: calc(36em - 0.0625em)) {
+  .break-only-xs {
+    display: block !important;
+  }
+  .hide-only-xs {
+    display: none !important;
+  }
+}
+
+/* SM Only (576-767px) */
+@media (min-width: 36em) and (max-width: calc(48em - 0.0625em)) {
+  .break-only-sm {
+    display: block !important;
+  }
+  .hide-only-sm {
+    display: none !important;
+  }
+}
+
+/* MD Only (768-1023px) */
+@media (min-width: 48em) and (max-width: calc(64em - 0.0625em)) {
+  .break-only-md {
+    display: block !important;
+  }
+  .hide-only-md {
+    display: none !important;
+  }
+}
+
+/* LG Only (1024-1199px) */
+@media (min-width: 64em) and (max-width: calc(75em - 0.0625em)) {
+  .break-only-lg {
+    display: block !important;
+  }
+  .hide-only-lg {
+    display: none !important;
+  }
+}
+
+/* XL Only (1200-1535px) */
+@media (min-width: 75em) and (max-width: calc(96em - 0.0625em)) {
+  .break-only-xl {
+    display: block !important;
+  }
+  .hide-only-xl {
+    display: none !important;
+  }
+}
+
+/* 2XL Only (1536px+) */
+@media (min-width: 96em) {
+  .break-only-2xl {
+    display: block !important;
+  }
+  .hide-only-2xl {
+    display: none !important;
+  }
+}
+
+/* Mobile Only (520-767px) */
+@media (min-width: 32.5em) and (max-width: calc(48em - 0.0625em)) {
+  .break-only-mobile {
+    display: block !important;
+  }
+  .hide-only-mobile {
+    display: none !important;
+  }
+}
+
+/* Tablet Only (768-1023px) */
+@media (min-width: 48em) and (max-width: calc(64em - 0.0625em)) {
+  .break-only-tablet {
+    display: block !important;
+  }
+  .hide-only-tablet {
+    display: none !important;
+  }
+}
+
+/* Laptop Only (1024-1299px) */
+@media (min-width: 64em) and (max-width: calc(81.25em - 0.0625em)) {
+  .break-only-laptop {
+    display: block !important;
+  }
+  .hide-only-laptop {
+    display: none !important;
+  }
+}
+
+/* Desktop Only (1300-1539px) */
+@media (min-width: 81.25em) and (max-width: calc(96.25em - 0.0625em)) {
+  .break-only-desktop {
+    display: block !important;
+  }
+  .hide-only-desktop {
+    display: none !important;
+  }
+}
+
+/* Wide Screen Only (1540-1919px) */
+@media (min-width: 96.25em) and (max-width: calc(120em - 0.0625em)) {
+  .break-only-wide-screen {
+    display: block !important;
+  }
+  .hide-only-wide-screen {
+    display: none !important;
+  }
+}
+
+/* Ultra Only (1920px+) */
+@media (min-width: 120em) {
+  .break-only-ultra {
+    display: block !important;
+  }
+  .hide-only-ultra {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   ORIENTATION UTILITIES
+   ============================================ */
+
+/* Portrait Orientation */
+@media (orientation: portrait) {
+  .break-portrait {
+    display: block !important;
+  }
+  .hide-portrait {
+    display: none !important;
+  }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) {
+  .break-landscape {
+    display: block !important;
+  }
+  .hide-landscape {
+    display: none !important;
+  }
+}
+
+/* Combined: Medium breakpoint with landscape */
+@media (min-width: 48em) and (orientation: landscape) {
+  .break-md-landscape {
+    display: block !important;
+  }
+  .hide-md-landscape {
+    display: none !important;
+  }
+}
+
+/* Combined: Large breakpoint with portrait */
+@media (min-width: 64em) and (orientation: portrait) {
+  .break-lg-portrait {
+    display: block !important;
+  }
+  .hide-lg-portrait {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   DISPLAY TYPE VARIANTS
+   For elements that need specific display types
+   ============================================ */
+
+/* Inline variants */
+.break-up-sm.inline {
+  display: inline !important;
+}
+.break-up-md.inline {
+  display: inline !important;
+}
+.break-up-lg.inline {
+  display: inline !important;
+}
+
+/* Inline-block variants */
+.break-up-sm.inline-block {
+  display: inline-block !important;
+}
+.break-up-md.inline-block {
+  display: inline-block !important;
+}
+.break-up-lg.inline-block {
+  display: inline-block !important;
+}
+
+/* Flex variants */
+.break-up-sm.flex {
+  display: flex !important;
+}
+.break-up-md.flex {
+  display: flex !important;
+}
+.break-up-lg.flex {
+  display: flex !important;
+}
+
+/* Grid variants */
+.break-up-sm.grid {
+  display: grid !important;
+}
+.break-up-md.grid {
+  display: grid !important;
+}
+.break-up-lg.grid {
+  display: grid !important;
+}
+
+/* ============================================
+   USAGE EXAMPLES
+   ============================================ */
+
+/*
+<!-- Show on medium screens and up (768px+) -->
+<div class="break-up-md">Visible on tablets and larger</div>
+
+<!-- Hide on large screens and down (1023px and below) -->
+<div class="hide-down-lg">Hidden on laptop and smaller</div>
+
+<!-- Show only on tablet screens (768-1023px) -->
+<div class="break-only-tablet">Only visible on tablets</div>
+
+<!-- Show on mobile portrait orientation -->
+<div class="break-portrait">Visible in portrait mode</div>
+
+<!-- Flex display on medium screens and up -->
+<div class="break-up-md flex">Flex container on md+</div>
+
+<!-- Hide on small screens, show as flex on medium+ -->
+<div class="hide-down-sm break-up-md flex">
+  Responsive flex container
+</div>
+*/
