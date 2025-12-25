@@ -5,13 +5,13 @@ Modern, accessible breakpoint system for responsive design using mobile-first ap
 ## 📋 Table of Contents
 
 - [Installation](#-installation)
-- [Available Breakpoints](#available-breakpoints)
-- [SCSS Mixins](#scss-mixins)
-- [SCSS Functions](#scss-functions)
-- [CSS Utility Classes](#css-utility-classes)
-- [Usage Examples](#usage-examples)
+- [Available Breakpoints](#-available-breakpoints)
+- [SCSS Mixins](#-scss-mixins)
+- [SCSS Functions](#-scss-functions)
+- [CSS Utility Classes](#-css-utility-classes)
+- [Usage Examples](#-usage-examples)
 - [Best Practices](#-best-practices)
-- [FAQ](#faq)
+- [FAQ](#-faq)
 
 ---
 
