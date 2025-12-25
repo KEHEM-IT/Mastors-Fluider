@@ -5,1472 +5,948 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Mastors Fluider v1.0.0 - Modern, accessible breakpoint system for responsive design">
+        content="Mastors Fluider v1.0.5 - Modern, accessible breakpoint system for responsive design">
     <meta name="keywords" content="CSS, SCSS, responsive design, breakpoints, mobile-first, accessibility">
     <meta name="author" content="KEHEM-IT">
-    <title>Mastors Fluider v1.0.0 - Complete Documentation</title>
+    <title>Mastors Fluider v1.0.5 - Complete Documentation</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #5f57fd;
-            --primary-dark: #4338ca;
-            --secondary: #06b6d4;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --border: #e2e8f0;
-            --code-bg: #282c34;
-            --code-text: #abb2bf;
-            --font-poppins: "Poppins", sans-serif;
-            --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
-        }
-
         body {
-            font-family: var(--font-poppins);
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--light);
-            font-family: "Poppins", "Hind Siliguri", sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--success) 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        code,
+        pre {
+            font-family: 'JetBrains Mono', monospace;
         }
 
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
+        .gradient-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
-        .version-badge {
-            display: inline-block;
-            background: #ffffff33;
-            padding: 0.25rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
-            backdrop-filter: blur(10px);
+        .gradient-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
 
-        .header p {
-            font-size: 1.125rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
+        .gradient-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
 
-        .header-actions {
-            margin-top: 1.5rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        .gradient-4 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+        .gradient-5 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
         }
 
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.25);
-        }
-
-        /* Navigation */
-        .nav {
-            position: sticky;
-            top: 0;
-            background: white;
-            border-bottom: 1px solid var(--border);
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            gap: 2rem;
-            overflow-x: auto;
-        }
-
-        .nav-link {
-            color: var(--gray);
-            text-decoration: none;
-            white-space: nowrap;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-link:hover {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        /* Section */
-        .section {
-            background: white;
-            border-radius: 1rem;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .section-icon {
-            font-size: 2rem;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            color: var(--dark);
-            margin: 2rem 0 1rem;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            color: var(--dark);
-            margin: 1.5rem 0 1rem;
-        }
-
-        h4 {
-            font-size: 1.25rem;
-            color: var(--gray);
-            margin: 1rem 0 0.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: var(--gray);
-        }
-
-        /* Table */
-        .table-container {
-            overflow-x: auto;
-            margin: 1.5rem 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        thead {
-            background: var(--light);
-        }
-
-        th,
-        td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        th {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        td {
-            color: var(--gray);
-        }
-
-        tbody tr:hover {
-            background: var(--light);
-        }
-
-        /* Code blocks */
-        .code-block {
-            font-family: var(--font-poppins);
-            background: var(--code-bg);
-            color: var(--code-text);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            overflow-x: auto;
-            margin: 1.5rem 0;
-            position: relative;
-            font-family: var(--font-mono);
-            font-size: 0.875rem;
-            line-height: 1.6;
-        }
-
-        .code-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .code-lang {
-            color: var(--secondary);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-        }
-
-        .copy-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.25rem;
-            cursor: pointer;
-            font-size: 0.75rem;
-            transition: all 0.2s ease;
-        }
-
-        .copy-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        code {
-            font-family: var(--font-mono);
-            background: var(--light);
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.25rem;
-            font-size: 0.875rem;
-            color: var(--primary);
-        }
-
-        pre code {
-            background: transparent;
-            padding: 0;
-            color: var(--code-text);
-        }
-
-        /* Feature Grid */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .feature-card {
-            background: var(--light);
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(79, 70, 229, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-desc {
-            color: var(--gray);
-            font-size: 0.9375rem;
-        }
-
-        /* Alert boxes */
-        .alert {
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
-            margin: 1.5rem 0;
-            border-left: 4px solid;
-        }
-
-        .alert-success {
-            background: rgba(16, 185, 129, 0.1);
-            border-color: var(--success);
-            color: #065f46;
-        }
-
-        .alert-warning {
-            background: rgba(245, 158, 11, 0.1);
-            border-color: var(--warning);
-            color: #92400e;
-        }
-
-        .alert-info {
-            background: rgba(6, 182, 212, 0.1);
-            border-color: var(--secondary);
-            color: #164e63;
-        }
-
-        .alert-danger {
-            background: rgba(239, 68, 68, 0.1);
-            border-color: var(--danger);
-            color: #991b1b;
-        }
-
-        /* Breakpoint demo */
-        .breakpoint-demo {
-            background: var(--light);
-            padding: 2rem;
-            border-radius: 0.75rem;
-            margin: 1.5rem 0;
-            text-align: center;
-        }
-
-        .demo-box {
-            background: var(--primary);
-            color: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 2rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .section {
-                padding: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .nav-container {
-                padding: 0.75rem 1rem;
-            }
-
-            .container {
-                padding: 2rem 1rem;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Syntax highlighting colors */
-        .keyword {
-            color: #c678dd;
-        }
-
-        .string {
-            color: #98c379;
-        }
-
-        .function {
-            color: #61afef;
-        }
-
-        .comment {
-            color: #5c6370;
-            font-style: italic;
-        }
-
-        .number {
-            color: #d19a66;
-        }
-
-        .operator {
-            color: #56b6c2;
+        .gradient-6 {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
         }
     </style>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155',
+                            text: '#e2e8f0',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="version-badge">v1.0.0 - Initial Release</div>
-        <h1>🚀 Mastors Fluider</h1>
-        <p style="color: #e9e9e9">Modern, accessible breakpoint system for responsive design using mobile-first approach and em units</p>
-        <div class="header-actions">
-            <a href="https://github.com/KEHEM-IT/Mastors-Fluider" class="btn btn-primary" target="_blank">
-                📦 View on GitHub
-            </a>
-            <a href="https://github.com/KEHEM-IT/Mastors-Fluider/releases/tag/v1.0.0" class="btn btn-secondary"
-                target="_blank">
-                📥 Download v1.0.0
-            </a>
+<body class="bg-dark-bg text-dark-text">
+
+    <header class="gradient-1 text-white py-16 px-4 shadow-2xl">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="inline-block bg-white/20 backdrop-blur-md px-6 py-2 rounded-full text-sm mb-4">
+                v1.0.5 - Latest Release
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 flex items-center justify-center gap-4">
+                <i class="fas fa-rocket"></i>
+                Mastors Fluider
+            </h1>
+            <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                Modern, accessible breakpoint system for responsive design using mobile-first approach and em units
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://github.com/KEHEM-IT/Mastors-Fluider" target="_blank"
+                    class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center gap-2">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="https://www.npmjs.com/package/mastors-fluider" target="_blank"
+                    class="bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all inline-flex items-center gap-2">
+                    <i class="fab fa-npm"></i> NPM Package
+                </a>
+                <a href="https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css" target="_blank"
+                    class="bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all inline-flex items-center gap-2">
+                    <i class="fas fa-link"></i> CDN Link
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="#overview" class="nav-link">Overview</a>
-            <a href="#installation" class="nav-link">Installation</a>
-            <a href="#breakpoints" class="nav-link">Breakpoints</a>
-            <a href="#scss" class="nav-link">SCSS Mixins</a>
-            <a href="#css" class="nav-link">CSS Classes</a>
-            <a href="#examples" class="nav-link">Examples</a>
-            <a href="#best-practices" class="nav-link">Best Practices</a>
-            <a href="#faq" class="nav-link">FAQ</a>
+    <nav class="sticky top-0 bg-dark-card border-b border-dark-border z-50 shadow-lg backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex gap-6 overflow-x-auto py-4 scrollbar-hide">
+                <a href="#overview"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Overview</a>
+                <a href="#installation"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Installation</a>
+                <a href="#breakpoints"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Breakpoints</a>
+                <a href="#scss"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">SCSS</a>
+                <a href="#css"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">CSS</a>
+                <a href="#examples"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Examples</a>
+                <a href="#changelog"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">Changelog</a>
+                <a href="#faq"
+                    class="text-dark-muted hover:text-white whitespace-nowrap transition-colors font-medium">FAQ</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Overview Section -->
-        <section id="overview" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">📖</span>
-                Overview
-            </h2>
-            <p>Mastors Fluider is a comprehensive breakpoint utility system designed for modern responsive web design.
-                Built with accessibility and developer experience in mind, it provides both SCSS mixins and CSS utility
-                classes for maximum flexibility.</p>
+    <main class="max-w-7xl mx-auto px-4 py-12">
 
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <div class="feature-title">Mobile-First</div>
-                    <div class="feature-desc">Built with progressive enhancement, starting from mobile and scaling up
+        <section id="overview" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fas fa-book-open text-purple-400"></i>
+                    Overview
+                </h2>
+                <p class="text-dark-muted text-lg mb-8">
+                    Mastors Fluider is a comprehensive breakpoint utility system designed for modern responsive web
+                    design.
+                    Built with accessibility and developer experience in mind, it provides both SCSS mixins and CSS
+                    utility
+                    classes for maximum flexibility.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <div
+                        class="bg-dark-bg rounded-xl p-6 border-2 border-transparent hover:border-purple-500 transition-all transform hover:scale-105">
+                        <div class="w-16 h-16 gradient-1 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-mobile-alt text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Mobile-First</h3>
+                        <p class="text-dark-muted">Built with progressive enhancement, starting from mobile and scaling
+                            up</p>
+                    </div>
+
+                    <div
+                        class="bg-dark-bg rounded-xl p-6 border-2 border-transparent hover:border-pink-500 transition-all transform hover:scale-105">
+                        <div class="w-16 h-16 gradient-2 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-universal-access text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Accessible</h3>
+                        <p class="text-dark-muted">Uses em units to respect user font-size preferences</p>
+                    </div>
+
+                    <div
+                        class="bg-dark-bg rounded-xl p-6 border-2 border-transparent hover:border-cyan-500 transition-all transform hover:scale-105">
+                        <div class="w-16 h-16 gradient-3 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-palette text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Dual Implementation</h3>
+                        <p class="text-dark-muted">Choose between SCSS mixins or CSS utility classes</p>
+                    </div>
+
+                    <div
+                        class="bg-dark-bg rounded-xl p-6 border-2 border-transparent hover:border-green-500 transition-all transform hover:scale-105">
+                        <div class="w-16 h-16 gradient-4 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-feather-alt text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Lightweight</h3>
+                        <p class="text-dark-muted">SCSS: ~5KB | CSS: ~11KB (3-4KB gzipped)</p>
+                    </div>
+
+                    <div
+                        class="bg-dark-bg rounded-xl p-6 border-2 border-transparent hover:border-yellow-500 transition-all transform hover:scale-105">
+                        <div class="w-16 h-16 gradient-5 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-cog text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Customizable</h3>
+                        <p class="text-dark-muted">Easy to extend with custom breakpoints and values</p>
+                    </div>
+
+                    <div
+                        class="bg-dark-bg rounded-xl p-6 border-2 border-transparent hover:border-indigo-500 transition-all transform hover:scale-105">
+                        <div class="w-16 h-16 gradient-6 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-th text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">12 Breakpoints</h3>
+                        <p class="text-dark-muted">From mobile to ultra-wide displays (520px - 1920px+)</p>
                     </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">♿</div>
-                    <div class="feature-title">Accessible</div>
-                    <div class="feature-desc">Uses em units to respect user font-size preferences</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <div class="feature-title">Dual Implementation</div>
-                    <div class="feature-desc">Choose between SCSS mixins or CSS utility classes</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <div class="feature-title">Lightweight</div>
-                    <div class="feature-desc">Only ~3-4KB gzipped for the complete CSS utility library</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <div class="feature-title">Customizable</div>
-                    <div class="feature-desc">Easy to extend with custom breakpoints and values</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📐</div>
-                    <div class="feature-title">12 Breakpoints</div>
-                    <div class="feature-desc">From mobile to ultra-wide displays (520px - 1920px+)</div>
-                </div>
-            </div>
 
-            <div class="alert alert-info">
-                <strong>💡 Perfect for:</strong> Responsive web apps, component libraries, design systems, static
-                websites, and rapid prototyping.
+                <div class="bg-cyan-500/10 border-l-4 border-cyan-500 p-6 rounded-lg">
+                    <p class="text-cyan-400 font-semibold mb-2">
+                        <i class="fas fa-lightbulb mr-2"></i>Perfect for:
+                    </p>
+                    <p class="text-dark-muted">
+                        Responsive web apps, component libraries, design systems, static websites, and rapid
+                        prototyping.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- Installation Section -->
-        <section id="installation" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">🚀</span>
-                Installation
-            </h2>
+        <section id="installation" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fas fa-download text-green-400"></i>
+                    Installation
+                </h2>
 
-            <h3>For SCSS Projects</h3>
-            <p>Import the breakpoints utility in your SCSS file:</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>@use 'path/to/breakpoints' as *;
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+                            <i class="fas fa-link text-purple-400"></i>
+                            Via CDN (Recommended for Quick Start)
+                        </h3>
+                        <p class="text-dark-muted mb-4">Add this link in your HTML <code
+                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">&lt;head&gt;</code>:</p>
+                        <div class="bg-dark-bg rounded-lg p-6 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-cyan-400 text-sm font-semibold uppercase">HTML</span>
+                                <button onclick="copyCode(this)"
+                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy mr-1"></i>Copy
+                                </button>
+                            </div>
+                            <pre
+                                class="text-green-400 overflow-x-auto"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css"&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+                            <i class="fab fa-npm text-red-400"></i>
+                            Via NPM
+                        </h3>
+                        <p class="text-dark-muted mb-4">Install the package:</p>
+                        <div class="bg-dark-bg rounded-lg p-6 mb-4 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-cyan-400 text-sm font-semibold uppercase">BASH</span>
+                                <button onclick="copyCode(this)"
+                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy mr-1"></i>Copy
+                                </button>
+                            </div>
+                            <pre class="text-green-400 overflow-x-auto"><code>npm i mastors-fluider</code></pre>
+                        </div>
+                        <p class="text-dark-muted mb-4">Then import in your CSS or SCSS file:</p>
+                        <div class="bg-dark-bg rounded-lg p-6 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-cyan-400 text-sm font-semibold uppercase">CSS</span>
+                                <button onclick="copyCode(this)"
+                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy mr-1"></i>Copy
+                                </button>
+                            </div>
+                            <pre class="text-purple-400 overflow-x-auto"><code>@import 'mastors-fluider';</code></pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+                            <i class="fab fa-sass text-pink-400"></i>
+                            For SCSS Projects
+                        </h3>
+                        <p class="text-dark-muted mb-4">Import the breakpoints utility in your SCSS file:</p>
+                        <div class="bg-dark-bg rounded-lg p-6 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-cyan-400 text-sm font-semibold uppercase">SCSS</span>
+                                <button onclick="copyCode(this)"
+                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy mr-1"></i>Copy
+                                </button>
+                            </div>
+                            <pre class="text-purple-400 overflow-x-auto"><code>@use 'mastors-fluider/mastors-fluider' as *;
 
 // Or with a custom namespace
-@use 'path/to/breakpoints' as bp;
+@use 'mastors-fluider/mastors-fluider' as bp;
 
 // Usage: @include bp.break-up(md) { ... }</code></pre>
-            </div>
+                        </div>
+                    </div>
 
-            <h3>For CSS Projects</h3>
-            <p>Link the breakpoints utility CSS file in your HTML:</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">HTML</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-blue-400"></i>
+                            For CSS Projects
+                        </h3>
+                        <p class="text-dark-muted mb-4">Link directly in your HTML:</p>
+                        <div class="bg-dark-bg rounded-lg p-6 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-cyan-400 text-sm font-semibold uppercase">HTML</span>
+                                <button onclick="copyCode(this)"
+                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy mr-1"></i>Copy
+                                </button>
+                            </div>
+                            <pre
+                                class="text-green-400 overflow-x-auto"><code>&lt;link rel="stylesheet" href="path/to/node_modules/mastors-fluider/mastors-fluider.css"&gt;</code></pre>
+                        </div>
+                    </div>
                 </div>
-                <pre><code>&lt;link rel="stylesheet" href="path/to/breakpoints.css"&gt;</code></pre>
-            </div>
 
-            <p>Or import in your CSS file:</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">CSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <div class="bg-green-500/10 border-l-4 border-green-500 p-6 rounded-lg mt-8">
+                    <p class="text-green-400 font-semibold mb-2">
+                        <i class="fas fa-check-circle mr-2"></i>Installation Complete!
+                    </p>
+                    <p class="text-dark-muted">
+                        You can now use breakpoint mixins in SCSS or utility classes in HTML.
+                    </p>
                 </div>
-                <pre><code>@import url('path/to/breakpoints.css');</code></pre>
-            </div>
-
-            <div class="alert alert-success">
-                <strong>✅ Installation Complete!</strong> You can now use breakpoint mixins in SCSS or utility classes
-                in HTML.
             </div>
         </section>
 
-        <!-- Breakpoints Section -->
-        <section id="breakpoints" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">📐</span>
-                Available Breakpoints
-            </h2>
+        <section id="breakpoints" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fas fa-ruler-horizontal text-blue-400"></i>
+                    Available Breakpoints
+                </h2>
 
-            <h3>Core Breakpoints</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Value</th>
-                            <th>Pixels</th>
-                            <th>Use Case</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>xs</code></td>
-                            <td><code>0</code></td>
-                            <td>0px</td>
-                            <td>Extra small devices (base styles)</td>
-                        </tr>
-                        <tr>
-                            <td><code>sm</code></td>
-                            <td><code>36em</code></td>
-                            <td>576px</td>
-                            <td>Small devices (large phones)</td>
-                        </tr>
-                        <tr>
-                            <td><code>md</code></td>
-                            <td><code>48em</code></td>
-                            <td>768px</td>
-                            <td>Medium devices (tablets)</td>
-                        </tr>
-                        <tr>
-                            <td><code>lg</code></td>
-                            <td><code>64em</code></td>
-                            <td>1024px</td>
-                            <td>Large devices (laptops)</td>
-                        </tr>
-                        <tr>
-                            <td><code>xl</code></td>
-                            <td><code>75em</code></td>
-                            <td>1200px</td>
-                            <td>Extra large devices (desktops)</td>
-                        </tr>
-                        <tr>
-                            <td><code>2xl</code></td>
-                            <td><code>96em</code></td>
-                            <td>1536px</td>
-                            <td>2X large devices (large desktops)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <h3 class="text-2xl font-semibold mb-4">Core Breakpoints</h3>
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-left">
+                        <thead class="bg-dark-bg">
+                            <tr>
+                                <th class="px-6 py-4 font-semibold">Name</th>
+                                <th class="px-6 py-4 font-semibold">Value</th>
+                                <th class="px-6 py-4 font-semibold">Pixels</th>
+                                <th class="px-6 py-4 font-semibold">Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code class="bg-dark-bg px-2 py-1 rounded text-cyan-400">xs</code>
+                                </td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">0</code></td>
+                                <td class="px-6 py-4">0px</td>
+                                <td class="px-6 py-4 text-dark-muted">Extra small devices (base styles)</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code class="bg-dark-bg px-2 py-1 rounded text-cyan-400">sm</code>
+                                </td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">36em</code></td>
+                                <td class="px-6 py-4">576px</td>
+                                <td class="px-6 py-4 text-dark-muted">Small devices (large phones)</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code class="bg-dark-bg px-2 py-1 rounded text-cyan-400">md</code>
+                                </td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">48em</code></td>
+                                <td class="px-6 py-4">768px</td>
+                                <td class="px-6 py-4 text-dark-muted">Medium devices (tablets)</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code class="bg-dark-bg px-2 py-1 rounded text-cyan-400">lg</code>
+                                </td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">64em</code></td>
+                                <td class="px-6 py-4">1024px</td>
+                                <td class="px-6 py-4 text-dark-muted">Large devices (laptops)</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code class="bg-dark-bg px-2 py-1 rounded text-cyan-400">xl</code>
+                                </td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">75em</code></td>
+                                <td class="px-6 py-4">1200px</td>
+                                <td class="px-6 py-4 text-dark-muted">Extra large devices (desktops)</td>
+                            </tr>
+                            <tr class="hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-cyan-400">2xl</code></td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">96em</code></td>
+                                <td class="px-6 py-4">1536px</td>
+                                <td class="px-6 py-4 text-dark-muted">2X large devices (large desktops)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <h3>MASTORSCDN Custom Breakpoints</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Value</th>
-                            <th>Pixels</th>
-                            <th>Use Case</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>mobile</code></td>
-                            <td><code>32.5em</code></td>
-                            <td>520px</td>
-                            <td>Mobile devices</td>
-                        </tr>
-                        <tr>
-                            <td><code>tablet</code></td>
-                            <td><code>48em</code></td>
-                            <td>768px</td>
-                            <td>Tablets</td>
-                        </tr>
-                        <tr>
-                            <td><code>laptop</code></td>
-                            <td><code>64em</code></td>
-                            <td>1024px</td>
-                            <td>Laptops</td>
-                        </tr>
-                        <tr>
-                            <td><code>desktop</code></td>
-                            <td><code>81.25em</code></td>
-                            <td>1300px</td>
-                            <td>Desktop screens</td>
-                        </tr>
-                        <tr>
-                            <td><code>wide-screen</code></td>
-                            <td><code>96.25em</code></td>
-                            <td>1540px</td>
-                            <td>Wide screens</td>
-                        </tr>
-                        <tr>
-                            <td><code>ultra</code></td>
-                            <td><code>120em</code></td>
-                            <td>1920px</td>
-                            <td>Ultra-wide/4K displays</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <h3 class="text-2xl font-semibold mb-4">MASTORSCDN Custom Breakpoints</h3>
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-left">
+                        <thead class="bg-dark-bg">
+                            <tr>
+                                <th class="px-6 py-4 font-semibold">Name</th>
+                                <th class="px-6 py-4 font-semibold">Value</th>
+                                <th class="px-6 py-4 font-semibold">Pixels</th>
+                                <th class="px-6 py-4 font-semibold">Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-cyan-400">mobile</code></td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">32.5em</code></td>
+                                <td class="px-6 py-4">520px</td>
+                                <td class="px-6 py-4 text-dark-muted">Mobile devices</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-cyan-400">tablet</code></td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">48em</code></td>
+                                <td class="px-6 py-4">768px</td>
+                                <td class="px-6 py-4 text-dark-muted">Tablets</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-cyan-400">laptop</code></td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">64em</code></td>
+                                <td class="px-6 py-4">1024px</td>
+                                <td class="px-6 py-4 text-dark-muted">Laptops</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-cyan-400">desktop</code></td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">81.25em</code></td>
+                                <td class="px-6 py-4">1300px</td>
+                                <td class="px-6 py-4 text-dark-muted">Desktop screens</td>
+                            </tr>
+                            <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-cyan-400">wide-screen</code></td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">96.25em</code></td>
+                                <td class="px-6 py-4">1540px</td>
+                                <td class="px-6 py-4 text-dark-muted">Wide screens</td>
+                            </tr>
+                            <tr class="hover:bg-dark-bg transition-colors">
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-cyan-400">ultra</code></td>
+                                <td class="px-6 py-4"><code
+                                        class="bg-dark-bg px-2 py-1 rounded text-purple-400">120em</code></td>
+                                <td class="px-6 py-4">1920px</td>
+                                <td class="px-6 py-4 text-dark-muted">Ultra-wide/4K displays</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <div class="alert alert-info">
-                <strong>💡 Why em units?</strong> Em units respect user browser font-size settings, making your
-                breakpoints more accessible. 1em = 16px by default.
+                <div class="bg-cyan-500/10 border-l-4 border-cyan-500 p-6 rounded-lg">
+                    <p class="text-cyan-400 font-semibold mb-2">
+                        <i class="fas fa-info-circle mr-2"></i>Why em units?
+                    </p>
+                    <p class="text-dark-muted">
+                        Em units respect user browser font-size settings, making your breakpoints more accessible. 1em =
+                        16px by default.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- SCSS Mixins Section -->
-        <section id="scss" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">🛠️</span>
-                SCSS Mixins & Functions
-            </h2>
+        <section id="scss" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fab fa-sass text-pink-400"></i>
+                    SCSS Mixins & Functions
+                </h2>
+                <p class="text-dark-muted mb-8">Powerful SCSS mixins for flexible responsive design. Full documentation
+                    available in the <a href="https://github.com/KEHEM-IT/Mastors-Fluider"
+                        class="text-purple-400 hover:text-purple-300">GitHub repository</a>.</p>
 
-            <h3>Main Breakpoint Mixin</h3>
-            <p><code>breakpoint($size, $type, $orientation)</code> - Full control over media queries</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-dark-bg p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-arrows-alt-h text-blue-400"></i>
+                            break-between()
+                        </h3>
+                        <p class="text-dark-muted mb-3">Apply styles between two breakpoints</p>
+                        <code class="text-sm text-purple-400">@include break-between(md, xl) { }</code>
+                    </div>
+
+                    <div class="bg-dark-bg p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-circle text-yellow-400"></i>
+                            break-only()
+                        </h3>
+                        <p class="text-dark-muted mb-3">Single breakpoint range only</p>
+                        <code class="text-sm text-purple-400">@include break-only(md) { }</code>
+                    </div>
                 </div>
-                <pre><code>// Mobile-first (min-width) - Default
-.container {
-  @include breakpoint(md) { // 768px+
-    padding: 2rem;
-  }
-}
-
-// Desktop-first (max-width)
-.header {
-  @include breakpoint(lg, 'max') { // 1024px and below
-    height: 60px;
-  }
-}
-
-// With orientation
-.gallery {
-  @include breakpoint(md, 'min', landscape) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}</code></pre>
-            </div>
-
-            <h3>Mobile-First: break-up()</h3>
-            <p>Shorthand for <code>min-width</code> queries. Applies styles from breakpoint and up.</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>.card {
-  padding: 1rem;
-  
-  @include break-up(md) { // 768px+
-    padding: 2rem;
-  }
-  
-  @include break-up(xl) { // 1200px+
-    padding: 3rem;
-  }
-}</code></pre>
-            </div>
-
-            <h3>Desktop-First: break-down()</h3>
-            <p>Shorthand for <code>max-width</code> queries. Applies styles up to breakpoint.</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>.sidebar {
-  width: 300px;
-  
-  @include break-down(lg) { // 1024px and below
-    width: 250px;
-  }
-  
-  @include break-down(md) { // 768px and below
-    width: 100%;
-  }
-}</code></pre>
-            </div>
-
-            <h3>Range: break-between()</h3>
-            <p>Apply styles between two breakpoints.</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>.banner {
-  @include break-between(md, xl) { // 768px to 1200px
-    font-size: 2rem;
-  }
-}</code></pre>
-            </div>
-
-            <h3>Single Range: break-only()</h3>
-            <p>Apply styles only within a specific breakpoint range.</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>.notification {
-  @include break-only(md) { // 768px to 1023px only
-    position: fixed;
-  }
-}</code></pre>
-            </div>
-
-            <h3>Custom Breakpoint</h3>
-            <p>Use custom width values not in the predefined map.</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>.special {
-  @include custom-breakpoint(50em) { // 800px+
-    display: grid;
-  }
-  
-  @include custom-breakpoint(900px, 'max') {
-    display: block;
-  }
-}</code></pre>
-            </div>
-
-            <h3>Get Breakpoint Function</h3>
-            <p>Retrieve breakpoint values for use in calculations or CSS custom properties.</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>$tablet-width: get-breakpoint(tablet); // Returns: 48em
-
-.custom-element {
-  max-width: $tablet-width;
-}
-
-// Pass to JavaScript via CSS variables
-:root {
-  --breakpoint-md: #{get-breakpoint(md)};
-}</code></pre>
             </div>
         </section>
 
-        <!-- CSS Classes Section -->
-        <section id="css" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">🎨</span>
-                CSS Utility Classes
-            </h2>
+        <section id="css" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fab fa-css3-alt text-blue-400"></i>
+                    CSS Utility Classes
+                </h2>
+                <p class="text-dark-muted mb-8">Ready-to-use utility classes for rapid responsive development.</p>
 
-            <h3>Mobile-First Classes</h3>
-            <p>Show elements at breakpoint and above (<code>min-width</code>).</p>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Class</th>
-                            <th>Shows At</th>
-                            <th>Example</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>.break-up-sm</code></td>
-                            <td>576px+</td>
-                            <td>Visible on small devices and up</td>
-                        </tr>
-                        <tr>
-                            <td><code>.break-up-md</code></td>
-                            <td>768px+</td>
-                            <td>Visible on tablets and up</td>
-                        </tr>
-                        <tr>
-                            <td><code>.break-up-lg</code></td>
-                            <td>1024px+</td>
-                            <td>Visible on laptops and up</td>
-                        </tr>
-                        <tr>
-                            <td><code>.hide-up-md</code></td>
-                            <td>768px+</td>
-                            <td>Hidden from tablets and up</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Mobile-First Classes</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-dark-bg">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Class</th>
+                                        <th class="px-6 py-4 font-semibold">Shows At</th>
+                                        <th class="px-6 py-4 font-semibold">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-sm</code>
+                                        </td>
+                                        <td class="px-6 py-4">576px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Visible on small devices and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-md</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Visible on tablets and up</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-up-lg</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Visible on laptops and up</td>
+                                    </tr>
+                                    <tr class="hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.hide-up-md</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px+</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden from tablets and up</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">HTML</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Desktop-First Classes</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-dark-bg">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Class</th>
+                                        <th class="px-6 py-4 font-semibold">Shows At</th>
+                                        <th class="px-6 py-4 font-semibold">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-down-md</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Visible up to tablets</td>
+                                    </tr>
+                                    <tr class="border-b border-dark-border hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.break-down-lg</code>
+                                        </td>
+                                        <td class="px-6 py-4">1024px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Visible up to laptops</td>
+                                    </tr>
+                                    <tr class="hover:bg-dark-bg transition-colors">
+                                        <td class="px-6 py-4"><code
+                                                class="bg-dark-bg px-2 py-1 rounded text-cyan-400">.hide-down-md</code>
+                                        </td>
+                                        <td class="px-6 py-4">768px and below</td>
+                                        <td class="px-6 py-4 text-dark-muted">Hidden on tablets and smaller</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <pre><code>&lt;!-- Hidden on mobile, visible on tablet and up --&gt;
-&lt;div class="break-up-tablet"&gt;
-  Visible on tablets and larger
-&lt;/div&gt;</code></pre>
-            </div>
 
-            <h3>Desktop-First Classes</h3>
-            <p>Show elements at breakpoint and below (<code>max-width</code>).</p>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Class</th>
-                            <th>Shows At</th>
-                            <th>Example</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>.break-down-md</code></td>
-                            <td>768px and below</td>
-                            <td>Visible up to tablets</td>
-                        </tr>
-                        <tr>
-                            <td><code>.break-down-lg</code></td>
-                            <td>1024px and below</td>
-                            <td>Visible up to laptops</td>
-                        </tr>
-                        <tr>
-                            <td><code>.hide-down-md</code></td>
-                            <td>768px and below</td>
-                            <td>Hidden on tablets and smaller</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">HTML</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <div class="bg-yellow-500/10 border-l-4 border-yellow-500 p-6 rounded-lg mt-8">
+                    <p class="text-yellow-400 font-semibold mb-2">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>Note
+                    </p>
+                    <p class="text-dark-muted">
+                        Utility classes use !important to ensure they override component styles. This is intentional for
+                        maximum
+                        flexibility.
+                    </p>
                 </div>
-                <pre><code>&lt;!-- Mobile navigation --&gt;
-&lt;nav class="break-down-tablet"&gt;Mobile Navigation&lt;/nav&gt;
-
-&lt;!-- Desktop navigation --&gt;
-&lt;nav class="hide-down-laptop"&gt;Desktop Navigation&lt;/nav&gt;</code></pre>
-            </div>
-
-            <h3>Breakpoint-Only Classes</h3>
-            <p>Show elements only within specific breakpoint range.</p>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Class</th>
-                            <th>Range</th>
-                            <th>Shows Between</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>.break-only-sm</code></td>
-                            <td>576-767px</td>
-                            <td>Small devices only</td>
-                        </tr>
-                        <tr>
-                            <td><code>.break-only-md</code></td>
-                            <td>768-1023px</td>
-                            <td>Tablets only</td>
-                        </tr>
-                        <tr>
-                            <td><code>.break-only-lg</code></td>
-                            <td>1024-1199px</td>
-                            <td>Laptops only</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">HTML</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>&lt;!-- Only visible on tablets --&gt;
-&lt;div class="break-only-tablet"&gt;Tablet-specific content&lt;/div&gt;</code></pre>
-            </div>
-
-            <h3>Orientation Classes</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Class</th>
-                            <th>Shows When</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>.break-portrait</code></td>
-                            <td>Portrait orientation</td>
-                        </tr>
-                        <tr>
-                            <td><code>.break-landscape</code></td>
-                            <td>Landscape orientation</td>
-                        </tr>
-                        <tr>
-                            <td><code>.break-md-landscape</code></td>
-                            <td>Medium+ and landscape</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3>Display Type Modifiers</h3>
-            <p>Combine with breakpoint classes to set specific display types.</p>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">HTML</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>&lt;!-- Block on mobile, flex on medium+ --&gt;
-&lt;div class="break-up-md flex"&gt;
-  Responsive flex container
-&lt;/div&gt;
-
-&lt;!-- Grid on large screens --&gt;
-&lt;div class="break-up-lg grid"&gt;
-  Responsive grid container
-&lt;/div&gt;</code></pre>
-            </div>
-
-            <div class="alert alert-warning">
-                <strong>⚠️ Note:</strong> Utility classes use <code>!important</code> to ensure they override component
-                styles. This is intentional for maximum flexibility.
             </div>
         </section>
 
-        <!-- Examples Section -->
-        <section id="examples" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">💡</span>
-                Real-World Examples
-            </h2>
+        <section id="examples" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fas fa-code text-cyan-400"></i>
+                    Real-World Examples
+                </h2>
 
-            <h3>1. Responsive Navigation</h3>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">HTML</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Responsive Navigation</h3>
+                        <div class="bg-dark-bg rounded-lg p-6 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-cyan-400 text-sm font-semibold uppercase">HTML</span>
+                                <button onclick="copyCode(this)"
+                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy mr-1"></i>Copy
+                                </button>
+                            </div>
+                            <pre class="text-green-400 overflow-x-auto"><code>&lt;!-- Mobile menu toggle --&gt;
+                &lt;button class="menu-toggle hide-up-lg"&gt;☰ Menu&lt;/button&gt;
+                
+                &lt;!-- Desktop navigation --&gt;
+                &lt;nav class="main-nav hide-down-lg"&gt;
+                  &lt;a href="#home"&gt;Home&lt;/a&gt;
+                  &lt;a href="#about"&gt;About&lt;/a&gt;
+                  &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+                &lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Responsive Grid with SCSS</h3>
+                        <div class="bg-dark-bg rounded-lg p-6 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-cyan-400 text-sm font-semibold uppercase">SCSS</span>
+                                <button onclick="copyCode(this)"
+                                    class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy mr-1"></i>Copy
+                                </button>
+                            </div>
+                            <pre class="text-purple-400 overflow-x-auto"><code>.product-grid {
+                  display: grid;
+                  grid-template-columns: 1fr;
+                  gap: 1rem;
+                  
+                  @include break-up(sm) {
+                    grid-template-columns: repeat(2, 1fr);
+                  }
+                  
+                  @include break-up(md) {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 2rem;
+                  }
+                  
+                  @include break-up(xl) {
+                    grid-template-columns: repeat(4, 1fr);
+                  }
+                }</code></pre>
+                        </div>
+                    </div>
                 </div>
-                <pre><code>&lt;!-- Mobile menu toggle --&gt;
-&lt;button class="menu-toggle hide-up-lg"&gt;☰ Menu&lt;/button&gt;
-
-&lt;!-- Desktop navigation --&gt;
-&lt;nav class="main-nav hide-down-lg"&gt;
-  &lt;a href="#home"&gt;Home&lt;/a&gt;
-  &lt;a href="#about"&gt;About&lt;/a&gt;
-  &lt;a href="#contact"&gt;Contact&lt;/a&gt;
-&lt;/nav&gt;</code></pre>
-            </div>
-
-            <h3>2. Responsive Grid with SCSS</h3>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>.product-grid {
-  display: grid;
-  grid-template-columns: 1fr; // Mobile: 1 column
-  gap: 1rem;
-  
-  @include break-up(sm) {
-    grid-template-columns: repeat(2, 1fr); // 2 columns
-  }
-  
-  @include break-up(md) {
-    grid-template-columns: repeat(3, 1fr); // 3 columns
-    gap: 2rem;
-  }
-  
-  @include break-up(xl) {
-    grid-template-columns: repeat(4, 1fr); // 4 columns
-  }
-}</code></pre>
-            </div>
-
-            <h3>3. Responsive Typography</h3>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>h1 {
-  font-size: 1.5rem; // Mobile
-  
-  @include break-up(sm) {
-    font-size: 2rem;
-  }
-  
-  @include break-up(md) {
-    font-size: 2.5rem;
-  }
-  
-  @include break-up(lg) {
-    font-size: 3rem;
-  }
-}</code></pre>
-            </div>
-
-            <h3>4. Responsive Cards</h3>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">HTML</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>&lt;div class="card"&gt;
-  &lt;img src="image.jpg" alt="Card image"&gt;
-  &lt;div class="card-content"&gt;
-    &lt;h3&gt;Card Title&lt;/h3&gt;
-    &lt;p&gt;Description&lt;/p&gt;
-    
-    &lt;!-- Show details only on tablet+ --&gt;
-    &lt;div class="card-details break-up-tablet"&gt;
-      &lt;span&gt;Author&lt;/span&gt;
-      &lt;span&gt;Date&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-
-            <h3>5. Container System</h3>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                </div>
-                <pre><code>.container {
-  width: 100%;
-  padding: 0 1rem;
-  margin: 0 auto;
-  
-  @include break-up(sm) {
-    max-width: 540px;
-  }
-  
-  @include break-up(md) {
-    max-width: 720px;
-  }
-  
-  @include break-up(lg) {
-    max-width: 960px;
-  }
-  
-  @include break-up(xl) {
-    max-width: 1140px;
-  }
-  
-  @include break-up(2xl) {
-    max-width: 1320px;
-  }
-}</code></pre>
-            </div>
-
-            <div class="alert alert-success">
-                <strong>✨ Pro Tip:</strong> Combine SCSS mixins for complex components and CSS classes for quick layout
-                adjustments!
             </div>
         </section>
 
-        <!-- Best Practices Section -->
-        <section id="best-practices" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">✅</span>
-                Best Practices
-            </h2>
+        <section id="changelog" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fas fa-history text-purple-400"></i>
+                    Changelog
+                </h2>
 
-            <h3>1. Use Mobile-First Approach</h3>
-            <div class="alert alert-success">
-                <strong>✅ Good:</strong> Start with mobile styles, then enhance for larger screens
-            </div>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-purple-500 pl-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">v1.0.5</span>
+                            <span class="text-dark-muted">December 26, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Latest Release</h3>
+                        <ul class="space-y-2 text-dark-muted">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span>Added NPM package for easy installation</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span>Updated readme.md with comprehensive documentation</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span>Enhanced documentation with better examples and structure</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span>Added CDN support via jsDelivr</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-4 border-gray-500 pl-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-semibold">v1.0.0</span>
+                            <span class="text-dark-muted">Initial Release</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Initial Release</h3>
+                        <ul class="space-y-2 text-dark-muted">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-400 mt-1"></i>
+                                <span>12 predefined breakpoints (6 core + 6 custom)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-400 mt-1"></i>
+                                <span>6 SCSS mixins for flexible responsive design</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-400 mt-1"></i>
+                                <span>100+ CSS utility classes</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-400 mt-1"></i>
+                                <span>Mobile-first approach with em units</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <pre><code>.element {
-  font-size: 1rem; // Mobile base
-  
-  @include break-up(md) {
-    font-size: 1.5rem; // Tablet+
-  }
-}</code></pre>
-            </div>
 
-            <div class="alert alert-danger">
-                <strong>❌ Avoid:</strong> Starting with desktop and overriding for mobile
-            </div>
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-lang">SCSS</span>
+                <div class="bg-purple-500/10 border-l-4 border-purple-500 p-6 rounded-lg mt-8">
+                    <p class="text-purple-400 font-semibold mb-2">
+                        <i class="fas fa-rocket mr-2"></i>File Sizes
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 text-dark-muted mt-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-sass text-pink-400"></i>
+                            <span><strong>mastors-fluider.scss:</strong> ~5KB</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-blue-400"></i>
+                            <span><strong>mastors-fluider.css:</strong> ~11KB (~3-4KB gzipped)</span>
+                        </div>
+                    </div>
                 </div>
-                <pre><code>.element {
-  font-size: 1.5rem; // Desktop default
-  
-  @include break-down(md) {
-    font-size: 1rem; // Override for mobile
-  }
-}</code></pre>
-            </div>
-
-            <h3>2. Keep Breakpoint Logic Simple</h3>
-            <p>Use <code>break-between()</code> or <code>break-only-*</code> instead of nesting breakpoints.</p>
-
-            <h3>3. Consistent Naming</h3>
-            <p>Choose either core (<code>sm</code>, <code>md</code>, <code>lg</code>) or custom (<code>mobile</code>,
-                <code>tablet</code>, <code>laptop</code>) naming. Don't mix them unnecessarily.
-            </p>
-
-            <h3>4. Don't Overuse Breakpoints</h3>
-            <p>Not every element needs 5+ breakpoints. Focus on critical layout shifts.</p>
-
-            <h3>5. Test Accessibility</h3>
-            <ul style="margin-left: 2rem; color: var(--gray);">
-                <li>Test with increased font sizes (150%, 200%)</li>
-                <li>Test on real devices, not just browser dev tools</li>
-                <li>Verify touch targets are at least 44×44px on mobile</li>
-                <li>Ensure content is accessible at all breakpoints</li>
-            </ul>
-
-            <h3>6. Performance Tips</h3>
-            <ul style="margin-left: 2rem; color: var(--gray);">
-                <li>Minimize unused CSS classes (use PurgeCSS if needed)</li>
-                <li>Combine related media queries when possible</li>
-                <li>Load critical CSS inline, defer non-critical styles</li>
-                <li>Use CSS containment for better rendering performance</li>
-            </ul>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">❓</span>
-                Frequently Asked Questions
-            </h2>
-
-            <h3>Why em units instead of px?</h3>
-            <p><strong>Accessibility.</strong> Em units respect user browser font-size settings. If a user increases
-                their font size for readability, breakpoints using em will adjust accordingly.</p>
-            <p><strong>Conversion:</strong> 1em = 16px (browser default)</p>
-
-            <h3>Can I mix SCSS and CSS classes?</h3>
-            <p>Absolutely! Use SCSS mixins for custom components and CSS utility classes for rapid layout adjustments.
-            </p>
-
-            <h3>What's the difference between break-down and break-up?</h3>
-            <ul style="margin-left: 2rem; color: var(--gray);">
-                <li><code>break-up-md</code>: Shows at 768px and above (mobile-first)</li>
-                <li><code>break-down-md</code>: Shows at 768px and below (desktop-first)</li>
-            </ul>
-
-            <h3>Why does the CSS file use !important?</h3>
-            <p>Utility classes use <code>!important</code> to ensure they override component styles, following the
-                utility-first pattern. This is intentional for maximum flexibility.</p>
-
-            <h3>Can I customize breakpoint values?</h3>
-            <p><strong>For SCSS:</strong> Yes, edit the <code>$breakpoints</code> map in the SCSS file.</p>
-            <p><strong>For CSS:</strong> You'll need to manually edit the media queries or use CSS custom properties.
-            </p>
-
-            <h3>Which approach should I use: SCSS or CSS classes?</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Use SCSS When</th>
-                            <th>Use CSS Classes When</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Building complex components</td>
-                            <td>Rapid prototyping</td>
-                        </tr>
-                        <tr>
-                            <td>Need fine-grained control</td>
-                            <td>Simple show/hide functionality</td>
-                        </tr>
-                        <tr>
-                            <td>Component library development</td>
-                            <td>Utility-first designs</td>
-                        </tr>
-                        <tr>
-                            <td>Prefer semantic CSS</td>
-                            <td>Quick responsive adjustments</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p><strong>Best Practice:</strong> Use both! SCSS for component styling, CSS classes for layout utilities.
-            </p>
-
-            <h3>How does this compare to Tailwind CSS?</h3>
-            <p>Mastors Fluider is complementary to Tailwind. You can use:</p>
-            <ul style="margin-left: 2rem; color: var(--gray);">
-                <li>Tailwind for utility-first styling (<code>p-4</code>, <code>bg-blue-500</code>)</li>
-                <li>Mastors Fluider for complex responsive logic and SCSS mixins</li>
-            </ul>
-
-            <h3>What's the file size impact?</h3>
-            <p>The CSS file is approximately <strong>15-20KB unminified</strong>. When minified and gzipped, it's only
-                <strong>3-4KB</strong>, which is negligible for most projects.
-            </p>
-
-            <h3>Can I use with JavaScript frameworks?</h3>
-            <p>Yes! Works seamlessly with:</p>
-            <ul style="margin-left: 2rem; color: var(--gray);">
-                <li>React (use className)</li>
-                <li>Vue (use :class binding)</li>
-                <li>Angular (use [ngClass])</li>
-                <li>Svelte (use class:)</li>
-                <li>Vanilla JavaScript (classList.add/remove)</li>
-            </ul>
-        </section>
-
-        <!-- Release Info Section -->
-        <section id="release" class="section">
-            <h2 class="section-title">
-                <span class="section-icon">📦</span>
-                Release Information
-            </h2>
-
-            <h3>v1.0.0 - Initial Release</h3>
-            <p><strong>Release Date:</strong> December 26, 2025</p>
-            <p><strong>Repository:</strong> <a href="https://github.com/KEHEM-IT/Mastors-Fluider"
-                    target="_blank">KEHEM-IT/Mastors-Fluider</a></p>
-
-            <h4>Files Included:</h4>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>File</th>
-                            <th>Purpose</th>
-                            <th>Size</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>_breakpoints.scss</code></td>
-                            <td>SCSS mixins and functions</td>
-                            <td>~6 KB</td>
-                        </tr>
-                        <tr>
-                            <td><code>breakpoints.css</code></td>
-                            <td>Standalone CSS utility classes</td>
-                            <td>~15 KB (~3-4 KB gzipped)</td>
-                        </tr>
-                        <tr>
-                            <td><code>readme.md</code></td>
-                            <td>Complete documentation</td>
-                            <td>~30 KB</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>What's New:</h4>
-            <ul style="margin-left: 2rem; color: var(--gray);">
-                <li>✨ 12 predefined breakpoints (6 core + 6 custom)</li>
-                <li>🛠️ 6 SCSS mixins for flexible responsive design</li>
-                <li>🎨 100+ CSS utility classes for rapid development</li>
-                <li>♿ Accessibility-first with em units</li>
-                <li>📱 Mobile-first approach by default</li>
-                <li>🎯 Orientation-specific classes</li>
-                <li>🔧 Display type modifiers (flex, grid, inline)</li>
-                <li>📖 Comprehensive documentation</li>
-            </ul>
-
-            <div class="alert alert-info">
-                <strong>🎉 Getting Started:</strong> Download the release from GitHub and follow the installation
-                instructions above!
             </div>
         </section>
+
+        <section id="faq" class="mb-16">
+            <div class="bg-dark-card rounded-2xl p-8 shadow-xl">
+                <h2 class="text-4xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fas fa-question-circle text-yellow-400"></i>
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="space-y-6">
+                    <div class="bg-dark-bg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-question text-purple-400"></i>
+                            Why em units instead of px?
+                        </h3>
+                        <p class="text-dark-muted">
+                            <strong class="text-white">Accessibility.</strong> Em units respect user browser font-size
+                            settings.
+                            If a user increases
+                            their font size for readability, breakpoints using em will adjust accordingly. Conversion:
+                            1em =
+                            16px (browser default).
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-bg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-question text-cyan-400"></i>
+                            Can I mix SCSS and CSS classes?
+                        </h3>
+                        <p class="text-dark-muted">
+                            Absolutely! Use SCSS mixins for custom components and CSS utility classes for rapid layout
+                            adjustments.
+                            This gives you the best of both worlds.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-bg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-question text-green-400"></i>
+                            What's the difference between break-down and break-up?
+                        </h3>
+                        <ul class="space-y-2 text-dark-muted">
+                            <li><code class="bg-dark-card px-2 py-1 rounded text-cyan-400">break-up-md</code>: Shows at
+                                768px
+                                and above (mobile-first)</li>
+                            <li><code class="bg-dark-card px-2 py-1 rounded text-cyan-400">break-down-md</code>: Shows
+                                at 768px
+                                and below (desktop-first)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-dark-bg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-question text-pink-400"></i>
+                            Why does the CSS file use !important?
+                        </h3>
+                        <p class="text-dark-muted">
+                            Utility classes use <code
+                                class="bg-dark-card px-2 py-1 rounded text-cyan-400">!important</code> to
+                            ensure they override component styles,
+                            following the utility-first pattern. This is intentional for maximum flexibility.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-bg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i class="fas fa-question text-blue-400"></i>
+                            Can I use with JavaScript frameworks?
+                        </h3>
+                        <p class="text-dark-muted mb-3">Yes! Works seamlessly with:</p>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-dark-muted">
+                            <div class="flex items-center gap-2">
+                                <i class="fab fa-react text-cyan-400"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fab fa-vuejs text-green-400"></i>
+                                <span>Vue</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fab fa-angular text-red-400"></i>
+                                <span>Angular</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-fire text-orange-400"></i>
+                                <span>Svelte</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fab fa-js text-yellow-400"></i>
+                                <span>Vanilla JS</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-ellipsis-h text-gray-400"></i>
+                                <span>And more</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Mastors Fluider</h3>
-                <p style="color: rgba(255,255,255,0.7);">Modern breakpoint system for responsive design</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 1rem;">Version 1.0.0</p>
+    <footer class="bg-dark-card border-t border-dark-border py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                        <i class="fas fa-rocket text-purple-400"></i>
+                        Mastors Fluider
+                    </h3>
+                    <p class="text-dark-muted mb-4">Modern breakpoint system for responsive design</p>
+                    <p class="text-dark-muted text-sm">Version 1.0.5</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links</h3>
+                    <div class="space-y-2">
+                        <a href="https://github.com/KEHEM-IT/Mastors-Fluider" target="_blank"
+                            class="block text-dark-muted hover:text-white transition-colors">
+                            <i class="fab fa-github mr-2"></i>GitHub Repository
+                        </a>
+                        <a href="https://www.npmjs.com/package/mastors-fluider" target="_blank"
+                            class="block text-dark-muted hover:text-white transition-colors">
+                            <i class="fab fa-npm mr-2"></i>NPM Package
+                        </a>
+                        <a href="https://github.com/KEHEM-IT/Mastors-Fluider/issues" target="_blank"
+                            class="block text-dark-muted hover:text-white transition-colors">
+                            <i class="fas fa-bug mr-2"></i>Report Issues
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <div class="space-y-2">
+                        <a href="#installation"
+                            class="block text-dark-muted hover:text-white transition-colors">Installation Guide</a>
+                        <a href="#scss" class="block text-dark-muted hover:text-white transition-colors">SCSS
+                            Documentation</a>
+                        <a href="#css" class="block text-dark-muted hover:text-white transition-colors">CSS Classes</a>
+                        <a href="#examples"
+                            class="block text-dark-muted hover:text-white transition-colors">Examples</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Community</h3>
+                    <a href="https://github.com/KEHEM-IT" target="_blank"
+                        class="block text-dark-muted hover:text-white transition-colors mb-4">
+                        <i class="fab fa-github mr-2"></i>KEHEM-IT on GitHub
+                    </a>
+                    <p class="text-dark-muted">
+                        Built for the
+                        <a href="https://www.jsdelivr.com/package/npm/mastorscdn" target="_blank"
+                            class="text-cyan-400 hover:text-cyan-300 font-semibold">
+                            MastorsCDN
+                        </a>
+                        Library
+                    </p>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Links</h3>
-                <a href="https://github.com/KEHEM-IT/Mastors-Fluider" target="_blank">GitHub Repository</a>
-                <a href="https://github.com/KEHEM-IT/Mastors-Fluider/releases" target="_blank">Releases</a>
-                <a href="https://github.com/KEHEM-IT/Mastors-Fluider/issues" target="_blank">Issues</a>
-                <a href="https://github.com/KEHEM-IT/Mastors-Fluider/discussions" target="_blank">Discussions</a>
+
+            <div class="border-t border-dark-border pt-8 text-center text-dark-muted">
+                <p class="mb-2">© 2025 KEHEM-IT. Free to use in personal and commercial projects.</p>
+                <p class="flex items-center justify-center gap-2">
+                    Made with <i class="fas fa-heart text-red-500"></i> for the responsive web
+                </p>
             </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <a href="#installation">Installation Guide</a>
-                <a href="#scss">SCSS Documentation</a>
-                <a href="#css">CSS Classes</a>
-                <a href="#examples">Examples</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <div class="footer-section">
-                <h3>Community</h3>
-                <a href="https://github.com/KEHEM-IT" target="_blank">KEHEM-IT on GitHub</a>
-                <p style="color: #ffffffb3; margin-top: 1rem;">Built for the <a
-                        style="color: #49fff0d3; display: inline; font-weight: 600;"
-                        href="https://www.jsdelivr.com/package/npm/mastorscdn">MastorsCDN</a> Library</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 KEHEM-IT. Free to use in personal and commercial projects.</p>
-            <p style="margin-top: 0.5rem;">Made with ❤️ for the responsive web</p>
         </div>
     </footer>
 
     <script>
-        // Copy code functionality
         function copyCode(button) {
-            const codeBlock = button.closest('.code-block');
+            const codeBlock = button.closest('div').parentElement;
             const code = codeBlock.querySelector('pre code').textContent;
 
             navigator.clipboard.writeText(code).then(() => {
-                const originalText = button.textContent;
-                button.textContent = 'Copied!';
-                button.style.background = 'rgba(16, 185, 129, 0.3)';
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-1"></i>Copied!';
+                button.classList.add('bg-green-500', 'hover:bg-green-600');
+                button.classList.remove('bg-white/10', 'hover:bg-white/20');
 
                 setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = 'rgba(255, 255, 255, 0.1)';
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    button.classList.add('bg-white/10', 'hover:bg-white/20');
                 }, 2000);
             });
         }
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const offset = 80; // Account for sticky nav
+                    const offset = 80;
                     const targetPosition = target.offsetTop - offset;
                     window.scrollTo({
                         top: targetPosition,
@@ -1480,26 +956,24 @@
             });
         });
 
-        // Highlight active nav link on scroll
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
 
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (pageYOffset >= sectionTop - 100) {
                     current = section.getAttribute('id');
                 }
             });
 
             navLinks.forEach(link => {
-                link.style.color = 'var(--gray)';
-                link.style.borderBottomColor = 'transparent';
+                link.classList.remove('text-white');
+                link.classList.add('text-dark-muted');
                 if (link.getAttribute('href').slice(1) === current) {
-                    link.style.color = 'var(--primary)';
-                    link.style.borderBottomColor = 'var(--primary)';
+                    link.classList.remove('text-dark-muted');
+                    link.classList.add('text-white');
                 }
             });
         });
