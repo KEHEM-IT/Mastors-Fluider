@@ -14,69 +14,77 @@ Modern, accessible breakpoint system for responsive design using mobile-first ap
 - [FAQ](#-faq)
 
 ---
-
 ## 🚀 Installation
+
+### Via CDN (Recommended for Quick Start)
+
+Add this link in your HTML `<head>`:
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css">
+```
+
+### Via NPM
+
+Install the package:
+```bash
+npm i mastors-fluider
+```
+
+Then import in your CSS or SCSS file:
+```css
+@import 'mastors-fluider';
+```
 
 ### For SCSS Projects
 
 Import the breakpoints utility in your SCSS file:
-
 ```scss
-@use "https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/_mastors-fluider.scss"
-  as *;
+@use 'mastors-fluider/mastors-fluider' as *;
 ```
 
 Or with a custom namespace:
-
 ```scss
-@use "https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/_mastors-fluider.scss"
-  as bp;
+@use 'mastors-fluider/mastors-fluider' as bp;
 
 // Usage: @include bp.break-up(md) { ... }
 ```
 
 ### For CSS Projects
 
-Link the breakpoints utility CSS file in your HTML:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css"
-/>
-```
-
-Or import in your CSS file:
-
+Import in your CSS file:
 ```css
-@import url("https://cdn.jsdelivr.net/gh/KEHEM-IT/Mastors-Fluider@main/mastors-fluider.css");
+@import 'mastors-fluider';
 ```
 
+Or link directly in your HTML:
+```html
+<link rel="stylesheet" href="path/to/node_modules/mastors-fluider/mastors-fluider.css">
+```
 ---
 
 ## 📐 Available Breakpoints
 
 ### Core Breakpoints
 
-| Name  | Value  | Pixels   | Use Case                          |
-| ----- | ------ | -------- | --------------------------------- |
-| `xs`  | `0`    | `0px`    | Extra small devices (base styles) |
-| `sm`  | `36em` | `576px`  | Small devices (large phones)      |
-| `md`  | `48em` | `768px`  | Medium devices (tablets)          |
-| `lg`  | `64em` | `1024px` | Large devices (laptops)           |
-| `xl`  | `75em` | `1200px` | Extra large devices (desktops)    |
+| Name | Value | Pixels | Use Case |
+|------|-------|--------|----------|
+| `xs` | `0` | `0px` | Extra small devices (base styles) |
+| `sm` | `36em` | `576px` | Small devices (large phones) |
+| `md` | `48em` | `768px` | Medium devices (tablets) |
+| `lg` | `64em` | `1024px` | Large devices (laptops) |
+| `xl` | `75em` | `1200px` | Extra large devices (desktops) |
 | `2xl` | `96em` | `1536px` | 2X large devices (large desktops) |
 
 ### MASTORSCDN Custom Breakpoints
 
-| Name          | Value     | Pixels   | Use Case               |
-| ------------- | --------- | -------- | ---------------------- |
-| `mobile`      | `32.5em`  | `520px`  | Mobile devices         |
-| `tablet`      | `48em`    | `768px`  | Tablets                |
-| `laptop`      | `64em`    | `1024px` | Laptops                |
-| `desktop`     | `81.25em` | `1300px` | Desktop screens        |
-| `wide-screen` | `96.25em` | `1540px` | Wide screens           |
-| `ultra`       | `120em`   | `1920px` | Ultra-wide/4K displays |
+| Name | Value | Pixels | Use Case |
+|------|-------|--------|----------|
+| `mobile` | `32.5em` | `520px` | Mobile devices |
+| `tablet` | `48em` | `768px` | Tablets |
+| `laptop` | `64em` | `1024px` | Laptops |
+| `desktop` | `81.25em` | `1300px` | Desktop screens |
+| `wide-screen` | `96.25em` | `1540px` | Wide screens |
+| `ultra` | `120em` | `1920px` | Ultra-wide/4K displays |
 
 ---
 
@@ -87,7 +95,6 @@ Or import in your CSS file:
 Main breakpoint mixin with full control.
 
 **Parameters:**
-
 - `$size` (required): Breakpoint name from `$breakpoints` map
 - `$type` (optional): `'min'` (default) or `'max'`
 - `$orientation` (optional): `portrait` or `landscape`
@@ -97,24 +104,21 @@ Main breakpoint mixin with full control.
 ```scss
 // Mobile-first (min-width) - Default
 .container {
-  @include breakpoint(md) {
-    // 768px+
+  @include breakpoint(md) { // 768px+
     padding: 2rem;
   }
 }
 
 // Desktop-first (max-width)
 .header {
-  @include breakpoint(lg, "max") {
-    // 1024px and below
+  @include breakpoint(lg, 'max') { // 1024px and below
     height: 60px;
   }
 }
 
 // With orientation
 .gallery {
-  @include breakpoint(md, "min", landscape) {
-    // 768px+ landscape
+  @include breakpoint(md, 'min', landscape) { // 768px+ landscape
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -129,35 +133,30 @@ Main breakpoint mixin with full control.
 ```scss
 .card {
   padding: 1rem;
-
-  @include break-up(md) {
-    // 768px+
+  
+  @include break-up(md) { // 768px+
     padding: 2rem;
   }
-
-  @include break-up(xl) {
-    // 1200px+
+  
+  @include break-up(xl) { // 1200px+
     padding: 3rem;
   }
 }
 ```
 
 **Compiles to:**
-
 ```css
 .card {
   padding: 1rem;
 }
 
-@media (min-width: 48em) {
-  /* 768px+ */
+@media (min-width: 48em) { /* 768px+ */
   .card {
     padding: 2rem;
   }
 }
 
-@media (min-width: 75em) {
-  /* 1200px+ */
+@media (min-width: 75em) { /* 1200px+ */
   .card {
     padding: 3rem;
   }
@@ -173,14 +172,12 @@ Main breakpoint mixin with full control.
 ```scss
 .sidebar {
   width: 300px;
-
-  @include break-down(lg) {
-    // 1024px and below
+  
+  @include break-down(lg) { // 1024px and below
     width: 250px;
   }
-
-  @include break-down(md) {
-    // 768px and below
+  
+  @include break-down(md) { // 768px and below
     width: 100%;
   }
 }
@@ -194,15 +191,13 @@ Apply styles **between two breakpoints**.
 
 ```scss
 .banner {
-  @include break-between(md, xl) {
-    // 768px to 1200px
+  @include break-between(md, xl) { // 768px to 1200px
     font-size: 2rem;
   }
 }
 ```
 
 **Compiles to:**
-
 ```css
 @media (min-width: 48em) and (max-width: 75em) {
   .banner {
@@ -219,8 +214,7 @@ Apply styles **only within a specific breakpoint range** (from current breakpoin
 
 ```scss
 .notification {
-  @include break-only(md) {
-    // 768px to 1023px only
+  @include break-only(md) { // 768px to 1023px only
     position: fixed;
   }
 }
@@ -233,19 +227,16 @@ Apply styles **only within a specific breakpoint range** (from current breakpoin
 Use **custom width values** not in the predefined breakpoints map.
 
 **Parameters:**
-
 - `$width` (required): Custom width (accepts `em`, `px`, `rem`)
 - `$type` (optional): `'min'` (default) or `'max'`
 
 ```scss
 .special-layout {
-  @include custom-breakpoint(50em) {
-    // 800px+
+  @include custom-breakpoint(50em) { // 800px+
     display: grid;
   }
-
-  @include custom-breakpoint(900px, "max") {
-    // 900px and below
+  
+  @include custom-breakpoint(900px, 'max') { // 900px and below
     display: block;
   }
 }
@@ -268,7 +259,6 @@ $tablet-width: get-breakpoint(tablet); // Returns: 48em
 ```
 
 **Use cases:**
-
 - Store breakpoint values in variables
 - Use in calculations
 - Pass to JavaScript via CSS custom properties
@@ -289,26 +279,27 @@ The CSS version provides ready-to-use utility classes for responsive design with
 
 Show elements at breakpoint and above (min-width).
 
-| Class                   | Breakpoint | Shows At                   |
-| ----------------------- | ---------- | -------------------------- |
-| `.break-up-xs`          | 0px        | Always visible             |
-| `.break-up-sm`          | 576px+     | Small devices and up       |
-| `.break-up-md`          | 768px+     | Medium devices and up      |
-| `.break-up-lg`          | 1024px+    | Large devices and up       |
-| `.break-up-xl`          | 1200px+    | Extra large devices and up |
-| `.break-up-2xl`         | 1536px+    | 2X large devices and up    |
-| `.break-up-mobile`      | 520px+     | Mobile and up              |
-| `.break-up-tablet`      | 768px+     | Tablet and up              |
-| `.break-up-laptop`      | 1024px+    | Laptop and up              |
-| `.break-up-desktop`     | 1300px+    | Desktop and up             |
-| `.break-up-wide-screen` | 1540px+    | Wide screen and up         |
-| `.break-up-ultra`       | 1920px+    | Ultra-wide and up          |
+| Class | Breakpoint | Shows At |
+|-------|------------|----------|
+| `.break-up-xs` | 0px | Always visible |
+| `.break-up-sm` | 576px+ | Small devices and up |
+| `.break-up-md` | 768px+ | Medium devices and up |
+| `.break-up-lg` | 1024px+ | Large devices and up |
+| `.break-up-xl` | 1200px+ | Extra large devices and up |
+| `.break-up-2xl` | 1536px+ | 2X large devices and up |
+| `.break-up-mobile` | 520px+ | Mobile and up |
+| `.break-up-tablet` | 768px+ | Tablet and up |
+| `.break-up-laptop` | 1024px+ | Laptop and up |
+| `.break-up-desktop` | 1300px+ | Desktop and up |
+| `.break-up-wide-screen` | 1540px+ | Wide screen and up |
+| `.break-up-ultra` | 1920px+ | Ultra-wide and up |
 
 **Example:**
-
 ```html
 <!-- Hidden on mobile, visible on tablet and up -->
-<div class="break-up-tablet">Visible on tablets and larger screens</div>
+<div class="break-up-tablet">
+  Visible on tablets and larger screens
+</div>
 ```
 
 ---
@@ -317,16 +308,15 @@ Show elements at breakpoint and above (min-width).
 
 Hide elements at breakpoint and above (min-width).
 
-| Class          | Breakpoint | Hides At                      |
-| -------------- | ---------- | ----------------------------- |
-| `.hide-up-sm`  | 576px+     | Hidden from small devices up  |
-| `.hide-up-md`  | 768px+     | Hidden from medium devices up |
-| `.hide-up-lg`  | 1024px+    | Hidden from large devices up  |
-| `.hide-up-xl`  | 1200px+    | Hidden from XL devices up     |
-| `.hide-up-2xl` | 1536px+    | Hidden from 2XL devices up    |
+| Class | Breakpoint | Hides At |
+|-------|------------|----------|
+| `.hide-up-sm` | 576px+ | Hidden from small devices up |
+| `.hide-up-md` | 768px+ | Hidden from medium devices up |
+| `.hide-up-lg` | 1024px+ | Hidden from large devices up |
+| `.hide-up-xl` | 1200px+ | Hidden from XL devices up |
+| `.hide-up-2xl` | 1536px+ | Hidden from 2XL devices up |
 
 **Example:**
-
 ```html
 <!-- Visible on mobile, hidden on tablet and up -->
 <button class="hide-up-tablet">Mobile Menu</button>
@@ -338,20 +328,19 @@ Hide elements at breakpoint and above (min-width).
 
 Show elements at breakpoint and below (max-width).
 
-| Class                 | Breakpoint       | Shows At                   |
-| --------------------- | ---------------- | -------------------------- |
-| `.break-down-sm`      | 576px and below  | Small devices and smaller  |
-| `.break-down-md`      | 768px and below  | Medium devices and smaller |
-| `.break-down-lg`      | 1024px and below | Large devices and smaller  |
-| `.break-down-xl`      | 1200px and below | XL devices and smaller     |
-| `.break-down-2xl`     | 1536px and below | 2XL devices and smaller    |
-| `.break-down-mobile`  | 520px and below  | Mobile only                |
-| `.break-down-tablet`  | 768px and below  | Tablet and smaller         |
-| `.break-down-laptop`  | 1024px and below | Laptop and smaller         |
-| `.break-down-desktop` | 1300px and below | Desktop and smaller        |
+| Class | Breakpoint | Shows At |
+|-------|------------|----------|
+| `.break-down-sm` | 576px and below | Small devices and smaller |
+| `.break-down-md` | 768px and below | Medium devices and smaller |
+| `.break-down-lg` | 1024px and below | Large devices and smaller |
+| `.break-down-xl` | 1200px and below | XL devices and smaller |
+| `.break-down-2xl` | 1536px and below | 2XL devices and smaller |
+| `.break-down-mobile` | 520px and below | Mobile only |
+| `.break-down-tablet` | 768px and below | Tablet and smaller |
+| `.break-down-laptop` | 1024px and below | Laptop and smaller |
+| `.break-down-desktop` | 1300px and below | Desktop and smaller |
 
 **Example:**
-
 ```html
 <!-- Visible up to 768px, hidden on larger screens -->
 <nav class="break-down-tablet">Mobile Navigation</nav>
@@ -363,16 +352,15 @@ Show elements at breakpoint and below (max-width).
 
 Hide elements at breakpoint and below (max-width).
 
-| Class            | Breakpoint       | Hides At                     |
-| ---------------- | ---------------- | ---------------------------- |
-| `.hide-down-sm`  | 576px and below  | Hidden on small and smaller  |
-| `.hide-down-md`  | 768px and below  | Hidden on medium and smaller |
-| `.hide-down-lg`  | 1024px and below | Hidden on large and smaller  |
-| `.hide-down-xl`  | 1200px and below | Hidden on XL and smaller     |
-| `.hide-down-2xl` | 1536px and below | Hidden on 2XL and smaller    |
+| Class | Breakpoint | Hides At |
+|-------|------------|----------|
+| `.hide-down-sm` | 576px and below | Hidden on small and smaller |
+| `.hide-down-md` | 768px and below | Hidden on medium and smaller |
+| `.hide-down-lg` | 1024px and below | Hidden on large and smaller |
+| `.hide-down-xl` | 1200px and below | Hidden on XL and smaller |
+| `.hide-down-2xl` | 1536px and below | Hidden on 2XL and smaller |
 
 **Example:**
-
 ```html
 <!-- Hidden on mobile, visible on desktop -->
 <aside class="hide-down-laptop">Desktop Sidebar</aside>
@@ -384,23 +372,22 @@ Hide elements at breakpoint and below (max-width).
 
 Show elements only within a specific breakpoint range.
 
-| Class                     | Range       | Shows Between          |
-| ------------------------- | ----------- | ---------------------- |
-| `.break-only-xs`          | 0-575px     | Extra small only       |
-| `.break-only-sm`          | 576-767px   | Small only             |
-| `.break-only-md`          | 768-1023px  | Medium only            |
-| `.break-only-lg`          | 1024-1199px | Large only             |
-| `.break-only-xl`          | 1200-1535px | Extra large only       |
-| `.break-only-2xl`         | 1536px+     | 2X large only          |
-| `.break-only-mobile`      | 520-767px   | Mobile range only      |
-| `.break-only-tablet`      | 768-1023px  | Tablet range only      |
-| `.break-only-laptop`      | 1024-1299px | Laptop range only      |
-| `.break-only-desktop`     | 1300-1539px | Desktop range only     |
+| Class | Range | Shows Between |
+|-------|-------|---------------|
+| `.break-only-xs` | 0-575px | Extra small only |
+| `.break-only-sm` | 576-767px | Small only |
+| `.break-only-md` | 768-1023px | Medium only |
+| `.break-only-lg` | 1024-1199px | Large only |
+| `.break-only-xl` | 1200-1535px | Extra large only |
+| `.break-only-2xl` | 1536px+ | 2X large only |
+| `.break-only-mobile` | 520-767px | Mobile range only |
+| `.break-only-tablet` | 768-1023px | Tablet range only |
+| `.break-only-laptop` | 1024-1299px | Laptop range only |
+| `.break-only-desktop` | 1300-1539px | Desktop range only |
 | `.break-only-wide-screen` | 1540-1919px | Wide screen range only |
-| `.break-only-ultra`       | 1920px+     | Ultra-wide only        |
+| `.break-only-ultra` | 1920px+ | Ultra-wide only |
 
 **Example:**
-
 ```html
 <!-- Only visible on tablets (768-1023px) -->
 <div class="break-only-tablet">Tablet-specific content</div>
@@ -413,7 +400,6 @@ Show elements only within a specific breakpoint range.
 Hide elements only within a specific breakpoint range.
 
 **Example:**
-
 ```html
 <!-- Hidden only on tablets, visible everywhere else -->
 <div class="hide-only-tablet">Not visible on tablets</div>
@@ -425,23 +411,26 @@ Hide elements only within a specific breakpoint range.
 
 Control visibility based on device orientation.
 
-| Class                 | Shows When            |
-| --------------------- | --------------------- |
-| `.break-portrait`     | Portrait orientation  |
-| `.break-landscape`    | Landscape orientation |
-| `.hide-portrait`      | Hide in portrait      |
-| `.hide-landscape`     | Hide in landscape     |
+| Class | Shows When |
+|-------|------------|
+| `.break-portrait` | Portrait orientation |
+| `.break-landscape` | Landscape orientation |
+| `.hide-portrait` | Hide in portrait |
+| `.hide-landscape` | Hide in landscape |
 | `.break-md-landscape` | Medium+ and landscape |
-| `.break-lg-portrait`  | Large+ and portrait   |
+| `.break-lg-portrait` | Large+ and portrait |
 
 **Example:**
-
 ```html
 <!-- Only visible in landscape mode -->
-<div class="break-landscape">Landscape-optimized video player</div>
+<div class="break-landscape">
+  Landscape-optimized video player
+</div>
 
 <!-- Only visible in portrait on tablets+ -->
-<div class="break-lg-portrait">Portrait sidebar for large screens</div>
+<div class="break-lg-portrait">
+  Portrait sidebar for large screens
+</div>
 ```
 
 ---
@@ -450,21 +439,24 @@ Control visibility based on device orientation.
 
 Combine with breakpoint classes to set specific display types.
 
-| Modifier        | Display Value                      |
-| --------------- | ---------------------------------- |
-| `.inline`       | `display: inline !important`       |
+| Modifier | Display Value |
+|----------|---------------|
+| `.inline` | `display: inline !important` |
 | `.inline-block` | `display: inline-block !important` |
-| `.flex`         | `display: flex !important`         |
-| `.grid`         | `display: grid !important`         |
+| `.flex` | `display: flex !important` |
+| `.grid` | `display: grid !important` |
 
 **Example:**
-
 ```html
 <!-- Block on mobile, flex on medium+ -->
-<div class="break-up-md flex">Responsive flex container</div>
+<div class="break-up-md flex">
+  Responsive flex container
+</div>
 
 <!-- Block on mobile, grid on large+ -->
-<div class="break-up-lg grid">Responsive grid container</div>
+<div class="break-up-lg grid">
+  Responsive grid container
+</div>
 ```
 
 ---
@@ -476,19 +468,16 @@ Combine with breakpoint classes to set specific display types.
 ```scss
 h1 {
   font-size: 1.5rem; // Mobile base
-
-  @include break-up(sm) {
-    // 576px+
+  
+  @include break-up(sm) { // 576px+
     font-size: 2rem;
   }
-
-  @include break-up(md) {
-    // 768px+
+  
+  @include break-up(md) { // 768px+
     font-size: 2.5rem;
   }
-
-  @include break-up(lg) {
-    // 1024px+
+  
+  @include break-up(lg) { // 1024px+
     font-size: 3rem;
   }
 }
@@ -506,24 +495,10 @@ h1 {
 ```
 
 ```css
-.text-mobile {
-  font-size: 1.5rem;
-}
-@media (min-width: 36em) {
-  .text-mobile {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 48em) {
-  .text-mobile {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 64em) {
-  .text-mobile {
-    font-size: 3rem;
-  }
-}
+.text-mobile { font-size: 1.5rem; }
+@media (min-width: 36em) { .text-mobile { font-size: 2rem; } }
+@media (min-width: 48em) { .text-mobile { font-size: 2.5rem; } }
+@media (min-width: 64em) { .text-mobile { font-size: 3rem; } }
 ```
 
 ---
@@ -535,20 +510,17 @@ h1 {
   display: grid;
   grid-template-columns: 1fr; // Mobile: 1 column
   gap: 1rem;
-
-  @include break-up(sm) {
-    // 576px+
+  
+  @include break-up(sm) { // 576px+
     grid-template-columns: repeat(2, 1fr); // 2 columns
   }
-
-  @include break-up(md) {
-    // 768px+
+  
+  @include break-up(md) { // 768px+
     grid-template-columns: repeat(3, 1fr); // 3 columns
     gap: 2rem;
   }
-
-  @include break-up(xl) {
-    // 1200px+
+  
+  @include break-up(xl) { // 1200px+
     grid-template-columns: repeat(4, 1fr); // 4 columns
   }
 }
@@ -598,7 +570,9 @@ h1 {
 
 ```html
 <!-- Mobile menu toggle (hidden on desktop) -->
-<button class="menu-toggle hide-up-lg">☰ Menu</button>
+<button class="menu-toggle hide-up-lg">
+  ☰ Menu
+</button>
 
 <!-- Navigation (hidden on mobile, visible on desktop) -->
 <nav class="main-nav hide-down-lg">
@@ -622,10 +596,14 @@ h1 {
 ```html
 <div class="layout">
   <!-- Sidebar: full width on mobile, fixed width on desktop -->
-  <aside class="sidebar break-up-lg">Sidebar content</aside>
-
+  <aside class="sidebar break-up-lg">
+    Sidebar content
+  </aside>
+  
   <!-- Main content -->
-  <main class="content">Main content</main>
+  <main class="content">
+    Main content
+  </main>
 </div>
 ```
 
@@ -644,13 +622,13 @@ h1 {
   .layout {
     flex-direction: row;
   }
-
+  
   .sidebar {
     width: 250px;
     position: sticky;
     top: 0;
   }
-
+  
   .content {
     flex: 1;
   }
@@ -666,29 +644,24 @@ h1 {
   width: 100%;
   padding: 0 1rem;
   margin: 0 auto;
-
-  @include break-up(sm) {
-    // 576px+
+  
+  @include break-up(sm) { // 576px+
     max-width: 540px;
   }
-
-  @include break-up(md) {
-    // 768px+
+  
+  @include break-up(md) { // 768px+
     max-width: 720px;
   }
-
-  @include break-up(lg) {
-    // 1024px+
+  
+  @include break-up(lg) { // 1024px+
     max-width: 960px;
   }
-
-  @include break-up(xl) {
-    // 1200px+
+  
+  @include break-up(xl) { // 1200px+
     max-width: 1140px;
   }
-
-  @include break-up(2xl) {
-    // 1536px+
+  
+  @include break-up(2xl) { // 1536px+
     max-width: 1320px;
   }
 }
@@ -701,12 +674,12 @@ h1 {
 ```html
 <div class="gallery">
   <!-- Full width on mobile -->
-  <img class="gallery-item" src="image1.jpg" alt="Image 1" />
-  <img class="gallery-item" src="image2.jpg" alt="Image 2" />
-  <img class="gallery-item" src="image3.jpg" alt="Image 3" />
-
+  <img class="gallery-item" src="image1.jpg" alt="Image 1">
+  <img class="gallery-item" src="image2.jpg" alt="Image 2">
+  <img class="gallery-item" src="image3.jpg" alt="Image 3">
+  
   <!-- Only visible on desktop -->
-  <img class="gallery-item break-up-xl" src="image4.jpg" alt="Image 4" />
+  <img class="gallery-item break-up-xl" src="image4.jpg" alt="Image 4">
 </div>
 ```
 
@@ -738,11 +711,11 @@ h1 {
 <div class="card-container">
   <!-- Card layout changes based on screen size -->
   <div class="card">
-    <img src="thumbnail.jpg" alt="Thumbnail" />
+    <img src="thumbnail.jpg" alt="Thumbnail">
     <div class="card-content">
       <h3>Card Title</h3>
       <p>Card description</p>
-
+      
       <!-- Hide details on mobile, show on tablet+ -->
       <div class="card-details break-up-tablet">
         <span>Author</span>
@@ -760,14 +733,12 @@ h1 {
 ```scss
 .video-player {
   aspect-ratio: 16 / 9;
-
-  @include breakpoint(md, "min", landscape) {
-    // 768px+ landscape
+  
+  @include breakpoint(md, 'min', landscape) { // 768px+ landscape
     aspect-ratio: 21 / 9;
   }
-
-  @include breakpoint(md, "min", portrait) {
-    // 768px+ portrait
+  
+  @include breakpoint(md, 'min', portrait) { // 768px+ portrait
     aspect-ratio: 4 / 3;
   }
 }
@@ -794,11 +765,10 @@ h1 {
 ### 1. **Use Mobile-First Approach**
 
 ✅ **Good (SCSS):**
-
 ```scss
 .element {
   font-size: 1rem; // Mobile base
-
+  
   @include break-up(md) {
     font-size: 1.5rem; // Tablet+
   }
@@ -806,7 +776,6 @@ h1 {
 ```
 
 ✅ **Good (CSS Classes):**
-
 ```html
 <div class="element">
   <span class="hide-up-md">Mobile content</span>
@@ -815,11 +784,10 @@ h1 {
 ```
 
 ❌ **Avoid:**
-
 ```scss
 .element {
   font-size: 1.5rem; // Desktop default
-
+  
   @include break-down(md) {
     font-size: 1rem; // Override for mobile
   }
@@ -831,24 +799,23 @@ h1 {
 ### 2. **Keep Breakpoint Logic Simple**
 
 ✅ **Good:**
-
 ```scss
 .card {
   @include break-up(md) {
     padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 }
 ```
 
 ✅ **Good (CSS Classes):**
-
 ```html
-<div class="card break-up-md">Appears on medium screens and up</div>
+<div class="card break-up-md">
+  Appears on medium screens and up
+</div>
 ```
 
 ❌ **Avoid:**
-
 ```scss
 .card {
   @include break-up(md) {
@@ -861,7 +828,6 @@ h1 {
 ```
 
 Use `break-between()` or `break-only-*` instead:
-
 ```scss
 .card {
   @include break-between(md, lg) {
@@ -871,7 +837,9 @@ Use `break-between()` or `break-only-*` instead:
 ```
 
 ```html
-<div class="card break-only-md">Only on medium screens</div>
+<div class="card break-only-md">
+  Only on medium screens
+</div>
 ```
 
 ---
@@ -881,13 +849,11 @@ Use `break-between()` or `break-only-*` instead:
 Choose either **core** (`sm`, `md`, `lg`) or **custom** (`mobile`, `tablet`, `laptop`) naming throughout your project. Don't mix them unnecessarily.
 
 ✅ **Good:**
-
 ```html
 <div class="hide-down-md break-up-lg">Content</div>
 ```
 
 ❌ **Avoid mixing:**
-
 ```html
 <div class="hide-down-tablet break-up-lg">Content</div>
 ```
@@ -899,13 +865,11 @@ Choose either **core** (`sm`, `md`, `lg`) or **custom** (`mobile`, `tablet`, `la
 Not every element needs 5+ breakpoints. Focus on critical layout shifts.
 
 ✅ **Good:**
-
 ```html
 <div class="break-up-tablet">Simple responsive element</div>
 ```
 
 ❌ **Avoid:**
-
 ```html
 <div class="hide-only-xs break-only-sm hide-only-md break-only-lg">
   Overly complex breakpoint logic
@@ -918,10 +882,14 @@ Not every element needs 5+ breakpoints. Focus on critical layout shifts.
 
 ```html
 <!-- Show as flex on medium+, block on mobile -->
-<div class="break-up-md flex">Flex container</div>
+<div class="break-up-md flex">
+  Flex container
+</div>
 
 <!-- Hide on mobile, show as grid on large+ -->
-<div class="hide-down-lg break-up-lg grid">Grid container</div>
+<div class="hide-down-lg break-up-lg grid">
+  Grid container
+</div>
 ```
 
 ---
@@ -929,7 +897,6 @@ Not every element needs 5+ breakpoints. Focus on critical layout shifts.
 ### 6. **Test on Real Devices**
 
 `em` units respect user font-size settings. Always test with:
-
 - Default browser settings
 - Increased font sizes (accessibility)
 - Different devices and orientations
@@ -994,9 +961,7 @@ Utility classes use `!important` to ensure they override component styles, follo
 }
 
 @media (min-width: var(--breakpoint-custom)) {
-  .custom-class {
-    display: block;
-  }
+  .custom-class { display: block; }
 }
 ```
 
@@ -1004,13 +969,13 @@ Utility classes use `!important` to ensure they override component styles, follo
 
 ### Which approach should I use: SCSS or CSS classes?
 
-| Use SCSS When                         | Use CSS Classes When              |
-| ------------------------------------- | --------------------------------- |
-| Building complex, reusable components | Rapid prototyping                 |
-| Need fine-grained control over styles | Simple show/hide functionality    |
-| Working in a component library        | Building utility-first designs    |
-| Want to avoid inline utility classes  | Need quick responsive adjustments |
-| Prefer semantic CSS                   | Prefer utility-first approach     |
+| Use SCSS When | Use CSS Classes When |
+|---------------|---------------------|
+| Building complex, reusable components | Rapid prototyping |
+| Need fine-grained control over styles | Simple show/hide functionality |
+| Working in a component library | Building utility-first designs |
+| Want to avoid inline utility classes | Need quick responsive adjustments |
+| Prefer semantic CSS | Prefer utility-first approach |
 
 **Best Practice:** Use both! SCSS for component styling, CSS classes for layout and visibility utilities.
 
@@ -1019,7 +984,6 @@ Utility classes use `!important` to ensure they override component styles, follo
 ### How do I use this with Tailwind CSS?
 
 This system is complementary to Tailwind. You can use:
-
 - **Tailwind** for utility-first styling (`p-4`, `bg-blue-500`)
 - **These breakpoint classes** for complex responsive logic
 
@@ -1032,7 +996,6 @@ Or, if you prefer Tailwind's approach entirely, use Tailwind's built-in breakpoi
 The CSS file is approximately **~15-20KB unminified**. When minified and gzipped, it's **~3-4KB**, which is negligible for most projects.
 
 If you need to reduce file size:
-
 1. Remove unused breakpoint variants (e.g., if you don't use `ultra` or `wide-screen`)
 2. Use a CSS purging tool like PurgeCSS
 3. Only include the specific breakpoints you need
@@ -1045,13 +1008,13 @@ Yes! You can dynamically add/remove classes:
 
 ```javascript
 // Show element on tablet and up
-element.classList.add("break-up-tablet");
+element.classList.add('break-up-tablet');
 
 // Hide element on mobile
-element.classList.add("hide-down-mobile");
+element.classList.add('hide-down-mobile');
 
 // Toggle responsive behavior
-element.classList.toggle("break-only-md");
+element.classList.toggle('break-only-md');
 ```
 
 ---
@@ -1090,12 +1053,18 @@ Found an issue or have a suggestion? Feel free to improve this utility!
 
 ---
 
-**Version:** 2.0.0  
-**Last Updated:** December 2025  
+**Version:** 1.0.0  
+**Last Updated:** 25 December, 2025  
 **Changelog:**
-
 - Added comprehensive CSS utility classes
 - Added display type modifiers (flex, grid, inline, inline-block)
 - Added orientation-specific classes
 - Enhanced documentation with CSS class examples
 - Added FAQ for CSS-specific questions
+
+**Version:** 1.0.5  
+**Last Updated:** 26 December, 2025  
+**Changelog:**
+- Added npm package
+- readme.md updated
+- documentation updated
