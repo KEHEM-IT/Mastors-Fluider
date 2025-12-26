@@ -48,7 +48,7 @@
         }
 
         .gradient-1 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #43e97b 75%, #4facfe 100%);
         }
 
         .gradient-2 {
@@ -69,6 +69,141 @@
 
         .gradient-6 {
             background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+
+
+
+        /* 🌈 Rainbow Flow - Vibrant & Bold */
+        .gradients-1 {
+            background:
+                radial-gradient(circle at 30% 40%,
+                    rgba(0, 153, 255, 0.25),
+                    transparent 55%),
+                radial-gradient(circle at 70% 60%,
+                    rgba(255, 0, 153, 0.25),
+                    transparent 55%),
+                linear-gradient(135deg,
+                    #0b0f1a 0%,
+                    #0e1424 40%,
+                    #0a0d18 100%);
+        }
+
+        /* 🌌 Aurora Borealis */
+        .gradients-2 {
+            background: linear-gradient(135deg,
+                    #0f172a 0%,
+                    #1e3a5f 15%,
+                    #0d9488 30%,
+                    #34d399 45%,
+                    #a78bfa 60%,
+                    #f472b6 75%,
+                    #1e3a5f 90%,
+                    #0f172a 100%);
+        }
+
+        /* 🌅 Sunset Paradise */
+        .gradients-3 {
+            background: linear-gradient(135deg,
+                    #1a1a2e 0%,
+                    #16213e 10%,
+                    #4a1942 25%,
+                    #c21f3d 40%,
+                    #f06543 55%,
+                    #f8961e 70%,
+                    #f9c74f 85%,
+                    #90be6d 100%);
+        }
+
+        /* 🔮 Cosmic Dreams */
+        .gradients-4 {
+            background: linear-gradient(135deg,
+                    #020024 0%,
+                    #090979 20%,
+                    #4c1d95 35%,
+                    #7c3aed 50%,
+                    #c026d3 65%,
+                    #f472b6 80%,
+                    #00d4ff 100%);
+        }
+
+        /* 🌊 Ocean Depths */
+        .gradients-5 {
+            background: linear-gradient(135deg,
+                    #0c1445 0%,
+                    #1a237e 15%,
+                    #0277bd 30%,
+                    #00acc1 45%,
+                    #26a69a 60%,
+                    #00e5ff 75%,
+                    #64ffda 90%,
+                    #b2ff59 100%);
+        }
+
+        /* 🍬 Cotton Candy */
+        .gradients-6 {
+            background: linear-gradient(135deg,
+                    #a855f7 0%,
+                    #c084fc 15%,
+                    #e879f9 30%,
+                    #f0abfc 45%,
+                    #fbcfe8 55%,
+                    #67e8f9 70%,
+                    #22d3ee 85%,
+                    #06b6d4 100%);
+        }
+
+        /* 🔥 Inferno */
+        .gradients-7 {
+            background: linear-gradient(135deg,
+                    #1a0000 0%,
+                    #4a0000 15%,
+                    #8b0000 25%,
+                    #dc2626 40%,
+                    #f97316 55%,
+                    #fbbf24 70%,
+                    #fef08a 85%,
+                    #ffffff 100%);
+        }
+
+        /* ✨ Holographic */
+        .gradients-8 {
+            background: linear-gradient(135deg,
+                    #ff6b6b 0%,
+                    #feca57 12%,
+                    #48dbfb 25%,
+                    #ff9ff3 37%,
+                    #54a0ff 50%,
+                    #5f27cd 62%,
+                    #00d2d3 75%,
+                    #ff6b6b 87%,
+                    #feca57 100%);
+        }
+
+        /* Animation for extra wow factor */
+        .gradient-animated {
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Glassmorphism overlay */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
     </style>
 
@@ -94,11 +229,13 @@
 
 <body class="bg-dark-bg text-dark-text">
 
-    <header class="gradient-1 text-white py-16 px-4 shadow-2xl">
+    <header class="gradients-1 gradient-animated shadow-2xl text-white py-16 px-4 shadow-2xl">
         <div class="max-w-7xl mx-auto text-center">
             <div class="inline-block bg-white/30 backdrop-blur-md text-white-600 px-6 py-2 rounded-full text-sm mb-4">
                 v1.0.5 - Latest Release
             </div>
+            <div class="w-full flex justify-center"><img src="assets/Mastors-Fluider-Logo.png" class="w-auto h-32"
+                    alt=""></div>
             <h1 class="text-5xl md:text-6xl font-bold mb-4 flex items-center justify-center gap-4">
                 <i class="fas fa-rocket"></i>
                 Mastors Fluider
