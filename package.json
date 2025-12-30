@@ -1,22 +1,33 @@
 {
   "name": "mastors-fluider",
-  "version": "1.0.5",
+  "version": "1.5.0",
   "description": "A responsive breakpoint utility for SCSS and CSS projects",
-  "main": "mastors-fluider.css",
-  "sass": "_mastors-fluider.scss",
-  "style": "mastors-fluider.css",
+  "main": "_mastors-fluider.scss",
   "files": [
-    "mastors-fluider.css",
-    "_mastors-fluider.scss",
-    "readme.md"
+    "_mastors-fluider.scss"
   ],
   "keywords": [
     "scss",
     "css",
+    "sass",
+    "sass-mixins",
+    "sass-utils",
     "breakpoints",
     "responsive",
-    "mixins",
-    "sass"
+    "responsive-design",
+    "media-queries",
+    "fluid-layout",
+    "fluid-design",
+    "layout-utils",
+    "frontend",
+    "ui",
+    "web-design",
+    "css-framework",
+    "css-utilities",
+    "style-utilities",
+    "mobile-first",
+    "mastors",
+    "mastorsCDN"
   ],
   "author": "KEHEM-IT",
   "license": "MIT",
@@ -29,3 +40,4 @@
   },
   "homepage": "https://github.com/KEHEM-IT/Mastors-Fluider#readme"
 }
+
