@@ -674,12 +674,12 @@ h1 {
 ```html
 <div class="gallery">
   <!-- Full width on mobile -->
-  <img class="gallery-item" src="image1.jpg" alt="Image 1">
-  <img class="gallery-item" src="image2.jpg" alt="Image 2">
-  <img class="gallery-item" src="image3.jpg" alt="Image 3">
+  <img class="gallery-item" src="assets/image1.jpg" alt="Image 1">
+  <img class="gallery-item" src="assets/image2.jpg" alt="Image 2">
+  <img class="gallery-item" src="assets/image3.jpg" alt="Image 3">
   
   <!-- Only visible on desktop -->
-  <img class="gallery-item break-up-xl" src="image4.jpg" alt="Image 4">
+  <img class="gallery-item break-up-xl" src="assets/image4.jpg" alt="Image 4">
 </div>
 ```
 
