@@ -711,7 +711,7 @@ h1 {
 <div class="card-container">
   <!-- Card layout changes based on screen size -->
   <div class="card">
-    <img src="thumbnail.jpg" alt="Thumbnail">
+    <img src="assets/thumbnail.jpg" alt="Thumbnail">
     <div class="card-content">
       <h3>Card Title</h3>
       <p>Card description</p>
