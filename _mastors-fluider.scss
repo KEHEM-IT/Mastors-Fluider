@@ -50,7 +50,7 @@ $breakpoints: (
     }
 
     @else {
-        $query: if($type =='max', 'max-width', 'min-width');
+        $query: if($type =='max', max-width, min-width);
 
         @if $orientation ==portrait or $orientation ==landscape {
             @media (#{$query}: $width) and (orientation: $orientation) {
@@ -126,7 +126,7 @@ $breakpoints: (
 
 // Custom media query mixin for specific width (accepts both em and px)
 @mixin custom-breakpoint($width, $type: 'min') {
-    $query: if($type =='max', 'max-width', 'min-width');
+    $query: if($type =='max', max-width, min-width);
 
     @media (#{$query}: $width) {
         @content;
