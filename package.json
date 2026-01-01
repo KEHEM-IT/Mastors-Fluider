@@ -40,6 +40,6 @@
   },
   "homepage": "https://github.com/KEHEM-IT/Mastors-Fluider#readme",
   "dependencies": {
-    "mastors-fluider": "^1.5.1"
+    "mastors-fluider": "^1.5.5"
   }
 }
