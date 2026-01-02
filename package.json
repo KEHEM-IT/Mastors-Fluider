@@ -1,6 +1,6 @@
 {
   "name": "mastors-fluider",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A responsive breakpoint utility for SCSS and CSS projects",
   "main": "index.scss",
   "files": [
